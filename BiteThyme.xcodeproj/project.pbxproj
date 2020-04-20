@@ -1,0 +1,601 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		10CB1BBF244820FB00821EB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CB1BBE244820FB00821EB9 /* AppDelegate.swift */; };
+		10CB1BC1244820FB00821EB9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CB1BC0244820FB00821EB9 /* SceneDelegate.swift */; };
+		10CB1BC3244820FB00821EB9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CB1BC2244820FB00821EB9 /* ViewController.swift */; };
+		10CB1BC6244820FB00821EB9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10CB1BC4244820FB00821EB9 /* Main.storyboard */; };
+		10CB1BC8244820FD00821EB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10CB1BC7244820FD00821EB9 /* Assets.xcassets */; };
+		10CB1BCB244820FD00821EB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10CB1BC9244820FD00821EB9 /* LaunchScreen.storyboard */; };
+		10CB1BD6244820FD00821EB9 /* BiteThymeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CB1BD5244820FD00821EB9 /* BiteThymeTests.swift */; };
+		10CB1BE1244820FD00821EB9 /* BiteThymeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CB1BE0244820FD00821EB9 /* BiteThymeUITests.swift */; };
+		10CB1BF02449414E00821EB9 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10CB1BEF2449414E00821EB9 /* WebKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		10CB1BD2244820FD00821EB9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 10CB1BB3244820FB00821EB9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 10CB1BBA244820FB00821EB9;
+			remoteInfo = BiteThyme;
+		};
+		10CB1BDD244820FD00821EB9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 10CB1BB3244820FB00821EB9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 10CB1BBA244820FB00821EB9;
+			remoteInfo = BiteThyme;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		10CB1BBB244820FB00821EB9 /* BiteThyme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BiteThyme.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		10CB1BBE244820FB00821EB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		10CB1BC0244820FB00821EB9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		10CB1BC2244820FB00821EB9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		10CB1BC5244820FB00821EB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		10CB1BC7244820FD00821EB9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		10CB1BCA244820FD00821EB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		10CB1BCC244820FD00821EB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10CB1BD1244820FD00821EB9 /* BiteThymeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BiteThymeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		10CB1BD5244820FD00821EB9 /* BiteThymeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiteThymeTests.swift; sourceTree = "<group>"; };
+		10CB1BD7244820FD00821EB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10CB1BDC244820FD00821EB9 /* BiteThymeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BiteThymeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		10CB1BE0244820FD00821EB9 /* BiteThymeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiteThymeUITests.swift; sourceTree = "<group>"; };
+		10CB1BE2244820FD00821EB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10CB1BEF2449414E00821EB9 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		10CB1BB8244820FB00821EB9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10CB1BF02449414E00821EB9 /* WebKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10CB1BCE244820FD00821EB9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10CB1BD9244820FD00821EB9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		10CB1BB2244820FB00821EB9 = {
+			isa = PBXGroup;
+			children = (
+				10CB1BBD244820FB00821EB9 /* BiteThyme */,
+				10CB1BD4244820FD00821EB9 /* BiteThymeTests */,
+				10CB1BDF244820FD00821EB9 /* BiteThymeUITests */,
+				10CB1BBC244820FB00821EB9 /* Products */,
+				10CB1BEE2449414E00821EB9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		10CB1BBC244820FB00821EB9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				10CB1BBB244820FB00821EB9 /* BiteThyme.app */,
+				10CB1BD1244820FD00821EB9 /* BiteThymeTests.xctest */,
+				10CB1BDC244820FD00821EB9 /* BiteThymeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		10CB1BBD244820FB00821EB9 /* BiteThyme */ = {
+			isa = PBXGroup;
+			children = (
+				10CB1BBE244820FB00821EB9 /* AppDelegate.swift */,
+				10CB1BC0244820FB00821EB9 /* SceneDelegate.swift */,
+				10CB1BC2244820FB00821EB9 /* ViewController.swift */,
+				10CB1BC4244820FB00821EB9 /* Main.storyboard */,
+				10CB1BC7244820FD00821EB9 /* Assets.xcassets */,
+				10CB1BC9244820FD00821EB9 /* LaunchScreen.storyboard */,
+				10CB1BCC244820FD00821EB9 /* Info.plist */,
+			);
+			path = BiteThyme;
+			sourceTree = "<group>";
+		};
+		10CB1BD4244820FD00821EB9 /* BiteThymeTests */ = {
+			isa = PBXGroup;
+			children = (
+				10CB1BD5244820FD00821EB9 /* BiteThymeTests.swift */,
+				10CB1BD7244820FD00821EB9 /* Info.plist */,
+			);
+			path = BiteThymeTests;
+			sourceTree = "<group>";
+		};
+		10CB1BDF244820FD00821EB9 /* BiteThymeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				10CB1BE0244820FD00821EB9 /* BiteThymeUITests.swift */,
+				10CB1BE2244820FD00821EB9 /* Info.plist */,
+			);
+			path = BiteThymeUITests;
+			sourceTree = "<group>";
+		};
+		10CB1BEE2449414E00821EB9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				10CB1BEF2449414E00821EB9 /* WebKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		10CB1BBA244820FB00821EB9 /* BiteThyme */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 10CB1BE5244820FD00821EB9 /* Build configuration list for PBXNativeTarget "BiteThyme" */;
+			buildPhases = (
+				10CB1BB7244820FB00821EB9 /* Sources */,
+				10CB1BB8244820FB00821EB9 /* Frameworks */,
+				10CB1BB9244820FB00821EB9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BiteThyme;
+			productName = BiteThyme;
+			productReference = 10CB1BBB244820FB00821EB9 /* BiteThyme.app */;
+			productType = "com.apple.product-type.application";
+		};
+		10CB1BD0244820FD00821EB9 /* BiteThymeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 10CB1BE8244820FD00821EB9 /* Build configuration list for PBXNativeTarget "BiteThymeTests" */;
+			buildPhases = (
+				10CB1BCD244820FD00821EB9 /* Sources */,
+				10CB1BCE244820FD00821EB9 /* Frameworks */,
+				10CB1BCF244820FD00821EB9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				10CB1BD3244820FD00821EB9 /* PBXTargetDependency */,
+			);
+			name = BiteThymeTests;
+			productName = BiteThymeTests;
+			productReference = 10CB1BD1244820FD00821EB9 /* BiteThymeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		10CB1BDB244820FD00821EB9 /* BiteThymeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 10CB1BEB244820FD00821EB9 /* Build configuration list for PBXNativeTarget "BiteThymeUITests" */;
+			buildPhases = (
+				10CB1BD8244820FD00821EB9 /* Sources */,
+				10CB1BD9244820FD00821EB9 /* Frameworks */,
+				10CB1BDA244820FD00821EB9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				10CB1BDE244820FD00821EB9 /* PBXTargetDependency */,
+			);
+			name = BiteThymeUITests;
+			productName = BiteThymeUITests;
+			productReference = 10CB1BDC244820FD00821EB9 /* BiteThymeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		10CB1BB3244820FB00821EB9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = "Maddie Drake";
+				TargetAttributes = {
+					10CB1BBA244820FB00821EB9 = {
+						CreatedOnToolsVersion = 11.4;
+					};
+					10CB1BD0244820FD00821EB9 = {
+						CreatedOnToolsVersion = 11.4;
+						TestTargetID = 10CB1BBA244820FB00821EB9;
+					};
+					10CB1BDB244820FD00821EB9 = {
+						CreatedOnToolsVersion = 11.4;
+						TestTargetID = 10CB1BBA244820FB00821EB9;
+					};
+				};
+			};
+			buildConfigurationList = 10CB1BB6244820FB00821EB9 /* Build configuration list for PBXProject "BiteThyme" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 10CB1BB2244820FB00821EB9;
+			productRefGroup = 10CB1BBC244820FB00821EB9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				10CB1BBA244820FB00821EB9 /* BiteThyme */,
+				10CB1BD0244820FD00821EB9 /* BiteThymeTests */,
+				10CB1BDB244820FD00821EB9 /* BiteThymeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		10CB1BB9244820FB00821EB9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10CB1BCB244820FD00821EB9 /* LaunchScreen.storyboard in Resources */,
+				10CB1BC8244820FD00821EB9 /* Assets.xcassets in Resources */,
+				10CB1BC6244820FB00821EB9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10CB1BCF244820FD00821EB9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10CB1BDA244820FD00821EB9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		10CB1BB7244820FB00821EB9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10CB1BC3244820FB00821EB9 /* ViewController.swift in Sources */,
+				10CB1BBF244820FB00821EB9 /* AppDelegate.swift in Sources */,
+				10CB1BC1244820FB00821EB9 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10CB1BCD244820FD00821EB9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10CB1BD6244820FD00821EB9 /* BiteThymeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10CB1BD8244820FD00821EB9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10CB1BE1244820FD00821EB9 /* BiteThymeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		10CB1BD3244820FD00821EB9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 10CB1BBA244820FB00821EB9 /* BiteThyme */;
+			targetProxy = 10CB1BD2244820FD00821EB9 /* PBXContainerItemProxy */;
+		};
+		10CB1BDE244820FD00821EB9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 10CB1BBA244820FB00821EB9 /* BiteThyme */;
+			targetProxy = 10CB1BDD244820FD00821EB9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		10CB1BC4244820FB00821EB9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				10CB1BC5244820FB00821EB9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		10CB1BC9244820FD00821EB9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				10CB1BCA244820FD00821EB9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		10CB1BE3244820FD00821EB9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		10CB1BE4244820FD00821EB9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		10CB1BE6244820FD00821EB9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BiteThyme/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Maddie.BiteThyme;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		10CB1BE7244820FD00821EB9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BiteThyme/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Maddie.BiteThyme;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		10CB1BE9244820FD00821EB9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BiteThymeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Maddie.BiteThymeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BiteThyme.app/BiteThyme";
+			};
+			name = Debug;
+		};
+		10CB1BEA244820FD00821EB9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BiteThymeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Maddie.BiteThymeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BiteThyme.app/BiteThyme";
+			};
+			name = Release;
+		};
+		10CB1BEC244820FD00821EB9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BiteThymeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Maddie.BiteThymeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BiteThyme;
+			};
+			name = Debug;
+		};
+		10CB1BED244820FD00821EB9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BiteThymeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Maddie.BiteThymeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BiteThyme;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		10CB1BB6244820FB00821EB9 /* Build configuration list for PBXProject "BiteThyme" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10CB1BE3244820FD00821EB9 /* Debug */,
+				10CB1BE4244820FD00821EB9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		10CB1BE5244820FD00821EB9 /* Build configuration list for PBXNativeTarget "BiteThyme" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10CB1BE6244820FD00821EB9 /* Debug */,
+				10CB1BE7244820FD00821EB9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		10CB1BE8244820FD00821EB9 /* Build configuration list for PBXNativeTarget "BiteThymeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10CB1BE9244820FD00821EB9 /* Debug */,
+				10CB1BEA244820FD00821EB9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		10CB1BEB244820FD00821EB9 /* Build configuration list for PBXNativeTarget "BiteThymeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10CB1BEC244820FD00821EB9 /* Debug */,
+				10CB1BED244820FD00821EB9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 10CB1BB3244820FB00821EB9 /* Project object */;
+}
