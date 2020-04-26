@@ -9,25 +9,19 @@
 import UIKit
 import Foundation
 import WebKit
+import SafariServices
 
-let clientID = "bitethyme-748cf1203e7cf4bb6ee392215704fa843470377299293020622"
-let redirectURI = "https://bitethyme.com"
-let clientSecret = "70bjcPhjGpVFWQuICAB1elT7i0EjgL2XDz3V0KI7"
-let header = clientID + ":" + clientSecret
-let headerEncoded = Data(header.utf8).base64EncodedString()
-//let secondEncoded = (header.data(using: .utf8))?.base64EncodedString()
 
-class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
+class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UIWebViewDelegate{
         
-    @IBOutlet weak var webSquare: WKWebView!
-    @IBOutlet weak var webSquareTwo: UIWebView!
+    //@IBOutlet weak var webSquare: WKWebView!
+    //@IBOutlet weak var webSquareTwo: UIWebView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        webSquare.navigationDelegate = self
+        //webSquare.navigationDelegate = self
     }
-
 
     override func viewDidAppear(_ animated: Bool) {
 //        super.viewDidAppear(animated)
@@ -36,14 +30,14 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
 //        webSquare.load(urlRequest)
     }
     
-    @IBAction func Authorize(_ sender: Any) {
+    @IBAction func Autrh(_ sender: Any) {
         let scope = "cart.basic:write"
         let responseType = "code"   //always code
         var baseString = "https://api.kroger.com/v1/connect/oauth2/authorize?scope=" + scope + "&client_id=" + clientID + "&redirect_uri=" + redirectURI + "&response_type=" + responseType
         print(baseString)
         let session = URLSession.shared
         let url = URL(string: baseString)!
-
+        
         let task = session.dataTask(with: url, completionHandler: { data, response, error in
         if let error = error {
             //print("error: \(error)")
@@ -56,8 +50,7 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
                 let data = data,
                 let string = String(data: data, encoding: .utf8) {
                 DispatchQueue.main.async {
-                    self.webSquare.loadHTMLString(string, baseURL: url)
-                    //print("STRING", string, "URL", url)
+                    //self.webSquare.loadHTMLString(string, baseURL: url)
                     //self.webSquareTwo.loadHTMLString(string, baseURL: url)
                 }
             }
@@ -65,31 +58,32 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
         })
         task.resume()
     }
-    
-    @IBAction func AccessToken(_ sender: Any) {
-        let url = URL(string: "https://api.kroger.com/v1/connect/oauth2/token")!
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
-        request.setValue(headerEncoded, forHTTPHeaderField: "Authorization")
-        //request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-
-        // prepare json body
-        let json: [String: Any] = ["grant_type": "authorization_code", "code": "authorization" , "redirect_uri": redirectURI]
-        let jsonData = try? JSONSerialization.data(withJSONObject: json)
-        request.httpBody = jsonData
+    @IBAction func Authorize(_ sender: Any) {
+        let scope = "cart.basic:write"
+        let responseType = "code"   //always code
+        var baseString = "https://api.kroger.com/v1/connect/oauth2/authorize?scope=" + scope + "&client_id=" + clientID + "&redirect_uri=" + redirectURI + "&response_type=" + responseType
+        print(baseString)
+        let session = URLSession.shared
+        let url = URL(string: baseString)!
         
-        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
-            if let error = error {
-                print("error: \(error)")
-            } else {
-                if let response = response as? HTTPURLResponse {
-                    print("statusCode: \(response.statusCode)")
-                }
-                if let data = data, let dataString = String(data: data, encoding: .utf8) {
-                    print("data: \(dataString)")
+        let task = session.dataTask(with: url, completionHandler: { data, response, error in
+        if let error = error {
+            //print("error: \(error)")
+        } else {
+            if let response = response as? HTTPURLResponse {
+                //print("statusCode: \(response.statusCode)")
+            }
+            
+            if let mimeType = response?.mimeType, mimeType == "text/html",
+                let data = data,
+                let string = String(data: data, encoding: .utf8) {
+                DispatchQueue.main.async {
+                    //self.webSquare.loadHTMLString(string, baseURL: url)
+                    //self.webSquareTwo.loadHTMLString(string, baseURL: url)
                 }
             }
         }
+        })
         task.resume()
     }
     
@@ -117,18 +111,17 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
     
     func webView(_ webView: WKWebView, decidePolicyFor navigationResponse: WKNavigationResponse, decisionHandler: @escaping (WKNavigationResponsePolicy) -> Void) {
         print("EXECUTING decide policy for ", webView.url)
+        //error 403 here
+        //print(navigationResponse)
         decisionHandler(.allow)
     }
 
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, preferences: WKWebpagePreferences, decisionHandler: @escaping (WKNavigationActionPolicy, WKWebpagePreferences) -> Void) {
         print("EXECUTING decide policy for 2", webView.url)
-        
+        //navigationAction.request.setValue(headerEncoded, forHTTPHeaderField: "Authorization")
         decisionHandler(.allow, .init())
     }
-    
-    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        print("DID FINISH NAV")
-    }
+
     
 }
 

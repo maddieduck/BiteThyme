@@ -7,57 +7,28 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Walmart-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BiteThyme" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="Walmart" customModule="BiteThyme" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vfR-8M-rjp">
-                                <rect key="frame" x="54" y="132" width="105" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Authorization"/>
-                                <connections>
-                                    <action selector="Authorize:" destination="BYZ-38-t0r" eventType="touchUpInside" id="98s-4E-N90"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JBD-vN-PU7">
-                                <rect key="frame" x="55" y="178" width="104" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Access Code"/>
-                                <connections>
-                                    <action selector="AccessToken:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BGQ-qq-WAa"/>
-                                </connections>
-                            </button>
                             <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0VY-gO-4xB">
                                 <rect key="frame" x="0.0" y="590" width="414" height="306"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
-                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WTt-mz-AKo">
-                                <rect key="frame" x="0.0" y="258" width="414" height="604"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <wkWebViewConfiguration key="configuration">
-                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                    <wkPreferences key="preferences"/>
-                                </wkWebViewConfiguration>
-                            </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vfR-8M-rjp">
+                                <rect key="frame" x="10" y="108" width="105" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Authorization"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="WTt-mz-AKo" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="BE6-iK-MvN"/>
-                            <constraint firstItem="WTt-mz-AKo" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Oho-pV-nPD"/>
-                            <constraint firstItem="WTt-mz-AKo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PHo-3I-Nfe"/>
-                            <constraint firstItem="WTt-mz-AKo" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.674107" id="aRG-UC-OiW"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <connections>
-                        <outlet property="webSquare" destination="WTt-mz-AKo" id="1kk-ik-XBy"/>
-                        <outlet property="webSquareTwo" destination="0VY-gO-4xB" id="Y6A-81-zpd"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		107F9D6A244FF8A2007470F4 /* Walmart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107F9D69244FF8A2007470F4 /* Walmart.swift */; };
+		107F9D6C245110F6007470F4 /* Kroger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107F9D6B245110F6007470F4 /* Kroger.swift */; };
 		10CB1BBF244820FB00821EB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CB1BBE244820FB00821EB9 /* AppDelegate.swift */; };
 		10CB1BC1244820FB00821EB9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CB1BC0244820FB00821EB9 /* SceneDelegate.swift */; };
 		10CB1BC3244820FB00821EB9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CB1BC2244820FB00821EB9 /* ViewController.swift */; };
@@ -16,6 +18,9 @@
 		10CB1BD6244820FD00821EB9 /* BiteThymeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CB1BD5244820FD00821EB9 /* BiteThymeTests.swift */; };
 		10CB1BE1244820FD00821EB9 /* BiteThymeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CB1BE0244820FD00821EB9 /* BiteThymeUITests.swift */; };
 		10CB1BF02449414E00821EB9 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10CB1BEF2449414E00821EB9 /* WebKit.framework */; };
+		53FE496E92F109455CA80FAB /* Pods_BiteThymeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CF8DA437D12F7F49E5593CF /* Pods_BiteThymeTests.framework */; };
+		7076B7F1A57AFFED6ADF2F07 /* Pods_BiteThyme.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1A044EDD2D081B0089DBA29 /* Pods_BiteThyme.framework */; };
+		F2914B2E7BAF224F62D2E161 /* Pods_BiteThyme_BiteThymeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93EE63C4F16CF7CBEF8B8520 /* Pods_BiteThyme_BiteThymeUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		107F9D69244FF8A2007470F4 /* Walmart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Walmart.swift; sourceTree = "<group>"; };
+		107F9D6B245110F6007470F4 /* Kroger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kroger.swift; sourceTree = "<group>"; };
 		10CB1BBB244820FB00821EB9 /* BiteThyme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BiteThyme.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10CB1BBE244820FB00821EB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10CB1BC0244820FB00821EB9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +58,15 @@
 		10CB1BE0244820FD00821EB9 /* BiteThymeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiteThymeUITests.swift; sourceTree = "<group>"; };
 		10CB1BE2244820FD00821EB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10CB1BEF2449414E00821EB9 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		2C25FD2811F1F67E8B32C0D5 /* Pods-BiteThymeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BiteThymeTests.debug.xcconfig"; path = "Target Support Files/Pods-BiteThymeTests/Pods-BiteThymeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		65AA7F3892BDC93619C0C348 /* Pods-BiteThyme.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BiteThyme.release.xcconfig"; path = "Target Support Files/Pods-BiteThyme/Pods-BiteThyme.release.xcconfig"; sourceTree = "<group>"; };
+		66296385A3991E1492A6B2C3 /* Pods-BiteThyme.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BiteThyme.debug.xcconfig"; path = "Target Support Files/Pods-BiteThyme/Pods-BiteThyme.debug.xcconfig"; sourceTree = "<group>"; };
+		6CF8DA437D12F7F49E5593CF /* Pods_BiteThymeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BiteThymeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		732245294045D1A841A36AC7 /* Pods-BiteThymeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BiteThymeTests.release.xcconfig"; path = "Target Support Files/Pods-BiteThymeTests/Pods-BiteThymeTests.release.xcconfig"; sourceTree = "<group>"; };
+		87E9B45C4E32180008FEFAB3 /* Pods-BiteThyme-BiteThymeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BiteThyme-BiteThymeUITests.release.xcconfig"; path = "Target Support Files/Pods-BiteThyme-BiteThymeUITests/Pods-BiteThyme-BiteThymeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		913BD516A0FA07184636A532 /* Pods-BiteThyme-BiteThymeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BiteThyme-BiteThymeUITests.debug.xcconfig"; path = "Target Support Files/Pods-BiteThyme-BiteThymeUITests/Pods-BiteThyme-BiteThymeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		93EE63C4F16CF7CBEF8B8520 /* Pods_BiteThyme_BiteThymeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BiteThyme_BiteThymeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1A044EDD2D081B0089DBA29 /* Pods_BiteThyme.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BiteThyme.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +75,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				10CB1BF02449414E00821EB9 /* WebKit.framework in Frameworks */,
+				7076B7F1A57AFFED6ADF2F07 /* Pods_BiteThyme.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53FE496E92F109455CA80FAB /* Pods_BiteThymeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2914B2E7BAF224F62D2E161 /* Pods_BiteThyme_BiteThymeUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +106,7 @@
 				10CB1BDF244820FD00821EB9 /* BiteThymeUITests */,
 				10CB1BBC244820FB00821EB9 /* Products */,
 				10CB1BEE2449414E00821EB9 /* Frameworks */,
+				1AF2345B165CFFD0E7211BCD /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,6 +126,8 @@
 				10CB1BBE244820FB00821EB9 /* AppDelegate.swift */,
 				10CB1BC0244820FB00821EB9 /* SceneDelegate.swift */,
 				10CB1BC2244820FB00821EB9 /* ViewController.swift */,
+				107F9D6B245110F6007470F4 /* Kroger.swift */,
+				107F9D69244FF8A2007470F4 /* Walmart.swift */,
 				10CB1BC4244820FB00821EB9 /* Main.storyboard */,
 				10CB1BC7244820FD00821EB9 /* Assets.xcassets */,
 				10CB1BC9244820FD00821EB9 /* LaunchScreen.storyboard */,
@@ -136,8 +158,25 @@
 			isa = PBXGroup;
 			children = (
 				10CB1BEF2449414E00821EB9 /* WebKit.framework */,
+				F1A044EDD2D081B0089DBA29 /* Pods_BiteThyme.framework */,
+				93EE63C4F16CF7CBEF8B8520 /* Pods_BiteThyme_BiteThymeUITests.framework */,
+				6CF8DA437D12F7F49E5593CF /* Pods_BiteThymeTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1AF2345B165CFFD0E7211BCD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				66296385A3991E1492A6B2C3 /* Pods-BiteThyme.debug.xcconfig */,
+				65AA7F3892BDC93619C0C348 /* Pods-BiteThyme.release.xcconfig */,
+				913BD516A0FA07184636A532 /* Pods-BiteThyme-BiteThymeUITests.debug.xcconfig */,
+				87E9B45C4E32180008FEFAB3 /* Pods-BiteThyme-BiteThymeUITests.release.xcconfig */,
+				2C25FD2811F1F67E8B32C0D5 /* Pods-BiteThymeTests.debug.xcconfig */,
+				732245294045D1A841A36AC7 /* Pods-BiteThymeTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,9 +186,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 10CB1BE5244820FD00821EB9 /* Build configuration list for PBXNativeTarget "BiteThyme" */;
 			buildPhases = (
+				32103AA1D725DCF8A52F9B6C /* [CP] Check Pods Manifest.lock */,
 				10CB1BB7244820FB00821EB9 /* Sources */,
 				10CB1BB8244820FB00821EB9 /* Frameworks */,
 				10CB1BB9244820FB00821EB9 /* Resources */,
+				AF3B8C5C76C0CCCC1AB548F2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -164,6 +205,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 10CB1BE8244820FD00821EB9 /* Build configuration list for PBXNativeTarget "BiteThymeTests" */;
 			buildPhases = (
+				BD53833118B0A3B00CC22272 /* [CP] Check Pods Manifest.lock */,
 				10CB1BCD244820FD00821EB9 /* Sources */,
 				10CB1BCE244820FD00821EB9 /* Frameworks */,
 				10CB1BCF244820FD00821EB9 /* Resources */,
@@ -182,9 +224,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 10CB1BEB244820FD00821EB9 /* Build configuration list for PBXNativeTarget "BiteThymeUITests" */;
 			buildPhases = (
+				36B9AE1EA0BF0DE45B70216D /* [CP] Check Pods Manifest.lock */,
 				10CB1BD8244820FD00821EB9 /* Sources */,
 				10CB1BD9244820FD00821EB9 /* Frameworks */,
 				10CB1BDA244820FD00821EB9 /* Resources */,
+				B773B0DFC2EAD04DFFC2BB4C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -266,11 +310,116 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		32103AA1D725DCF8A52F9B6C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BiteThyme-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		36B9AE1EA0BF0DE45B70216D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BiteThyme-BiteThymeUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AF3B8C5C76C0CCCC1AB548F2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BiteThyme/Pods-BiteThyme-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BiteThyme/Pods-BiteThyme-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BiteThyme/Pods-BiteThyme-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B773B0DFC2EAD04DFFC2BB4C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BiteThyme-BiteThymeUITests/Pods-BiteThyme-BiteThymeUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BiteThyme-BiteThymeUITests/Pods-BiteThyme-BiteThymeUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BiteThyme-BiteThymeUITests/Pods-BiteThyme-BiteThymeUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BD53833118B0A3B00CC22272 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BiteThymeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		10CB1BB7244820FB00821EB9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				107F9D6C245110F6007470F4 /* Kroger.swift in Sources */,
+				107F9D6A244FF8A2007470F4 /* Walmart.swift in Sources */,
 				10CB1BC3244820FB00821EB9 /* ViewController.swift in Sources */,
 				10CB1BBF244820FB00821EB9 /* AppDelegate.swift in Sources */,
 				10CB1BC1244820FB00821EB9 /* SceneDelegate.swift in Sources */,
@@ -444,6 +593,7 @@
 		};
 		10CB1BE6244820FD00821EB9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66296385A3991E1492A6B2C3 /* Pods-BiteThyme.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -461,6 +611,7 @@
 		};
 		10CB1BE7244820FD00821EB9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65AA7F3892BDC93619C0C348 /* Pods-BiteThyme.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -478,6 +629,7 @@
 		};
 		10CB1BE9244820FD00821EB9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C25FD2811F1F67E8B32C0D5 /* Pods-BiteThymeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -499,6 +651,7 @@
 		};
 		10CB1BEA244820FD00821EB9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 732245294045D1A841A36AC7 /* Pods-BiteThymeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -520,6 +673,7 @@
 		};
 		10CB1BEC244820FD00821EB9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 913BD516A0FA07184636A532 /* Pods-BiteThyme-BiteThymeUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -539,6 +693,7 @@
 		};
 		10CB1BED244820FD00821EB9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87E9B45C4E32180008FEFAB3 /* Pods-BiteThyme-BiteThymeUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

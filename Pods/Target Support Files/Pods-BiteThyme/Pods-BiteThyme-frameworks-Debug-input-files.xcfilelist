@@ -1,0 +1,6 @@
+${PODS_ROOT}/Target Support Files/Pods-BiteThyme/Pods-BiteThyme-frameworks.sh
+${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework
+${BUILT_PRODUCTS_DIR}/ISO8601/ISO8601.framework
+${BUILT_PRODUCTS_DIR}/JSONModel/JSONModel.framework
+${PODS_ROOT}/WalmartOpenApi/WalmartOpenApi.framework
+${PODS_ROOT}/WalmartSDKKit/WalmartSDKKit.framework

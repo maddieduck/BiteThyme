@@ -12,7 +12,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
- 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         print("willConnectTo")
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
@@ -50,11 +49,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
     }
-    @available(iOS 13.0, *)
+    
     func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
-        print("OPEN URL CONTEXTS")
         guard let url = URLContexts.first?.url else {
+            print("error in OpenUrlContexts. Url is nil.")
             return
+        }
+        let urlString = URLContexts.first?.url.absoluteString
+        if (urlString?.contains("bitethyme://callback") ?? false) && (urlString?.contains("bitethyme://callback") != nil){
+            let url = urlString!
+            let authKey = url.components(separatedBy: "=")[1]
+            NotificationCenter.default.post(name: callbackName, object: authKey)
         }
     }
     
