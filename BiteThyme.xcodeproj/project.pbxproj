@@ -3,12 +3,20 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		107F9D6A244FF8A2007470F4 /* Walmart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107F9D69244FF8A2007470F4 /* Walmart.swift */; };
 		107F9D6C245110F6007470F4 /* Kroger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107F9D6B245110F6007470F4 /* Kroger.swift */; };
+		107F9D6E2455425C007470F4 /* Sams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107F9D6D2455425C007470F4 /* Sams.swift */; };
+		107F9D70245558DE007470F4 /* Walgreens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107F9D6F245558DE007470F4 /* Walgreens.swift */; };
+		107F9D72245694F3007470F4 /* GroceryLists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107F9D71245694F3007470F4 /* GroceryLists.swift */; };
+		107F9D7A2457C696007470F4 /* GroceryListsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107F9D782457C696007470F4 /* GroceryListsCell.swift */; };
+		107F9D7B2457C696007470F4 /* GroceryListsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 107F9D792457C696007470F4 /* GroceryListsCell.xib */; };
+		107F9D7D2457E761007470F4 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107F9D7C2457E761007470F4 /* List.swift */; };
+		107F9D90245A7528007470F4 /* IngredientDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107F9D8E245A7527007470F4 /* IngredientDetail.swift */; };
+		107F9D91245A7528007470F4 /* storeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107F9D8F245A7528007470F4 /* storeCollectionViewCell.swift */; };
 		10CB1BBF244820FB00821EB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CB1BBE244820FB00821EB9 /* AppDelegate.swift */; };
 		10CB1BC1244820FB00821EB9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CB1BC0244820FB00821EB9 /* SceneDelegate.swift */; };
 		10CB1BC3244820FB00821EB9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CB1BC2244820FB00821EB9 /* ViewController.swift */; };
@@ -43,6 +51,14 @@
 /* Begin PBXFileReference section */
 		107F9D69244FF8A2007470F4 /* Walmart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Walmart.swift; sourceTree = "<group>"; };
 		107F9D6B245110F6007470F4 /* Kroger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kroger.swift; sourceTree = "<group>"; };
+		107F9D6D2455425C007470F4 /* Sams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sams.swift; sourceTree = "<group>"; };
+		107F9D6F245558DE007470F4 /* Walgreens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Walgreens.swift; sourceTree = "<group>"; };
+		107F9D71245694F3007470F4 /* GroceryLists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryLists.swift; sourceTree = "<group>"; };
+		107F9D782457C696007470F4 /* GroceryListsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryListsCell.swift; sourceTree = "<group>"; };
+		107F9D792457C696007470F4 /* GroceryListsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroceryListsCell.xib; sourceTree = "<group>"; };
+		107F9D7C2457E761007470F4 /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
+		107F9D8E245A7527007470F4 /* IngredientDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientDetail.swift; sourceTree = "<group>"; };
+		107F9D8F245A7528007470F4 /* storeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = storeCollectionViewCell.swift; sourceTree = "<group>"; };
 		10CB1BBB244820FB00821EB9 /* BiteThyme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BiteThyme.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10CB1BBE244820FB00821EB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10CB1BC0244820FB00821EB9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +114,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		107F9D772456A52B007470F4 /* Grocery Lists */ = {
+			isa = PBXGroup;
+			children = (
+				107F9D71245694F3007470F4 /* GroceryLists.swift */,
+				107F9D782457C696007470F4 /* GroceryListsCell.swift */,
+				107F9D792457C696007470F4 /* GroceryListsCell.xib */,
+			);
+			name = "Grocery Lists";
+			sourceTree = "<group>";
+		};
+		107F9D7E2457EB85007470F4 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				107F9D7C2457E761007470F4 /* List.swift */,
+				107F9D8E245A7527007470F4 /* IngredientDetail.swift */,
+				107F9D8F245A7528007470F4 /* storeCollectionViewCell.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
 		10CB1BB2244820FB00821EB9 = {
 			isa = PBXGroup;
 			children = (
@@ -123,11 +159,15 @@
 		10CB1BBD244820FB00821EB9 /* BiteThyme */ = {
 			isa = PBXGroup;
 			children = (
+				107F9D772456A52B007470F4 /* Grocery Lists */,
+				107F9D7E2457EB85007470F4 /* List */,
 				10CB1BBE244820FB00821EB9 /* AppDelegate.swift */,
 				10CB1BC0244820FB00821EB9 /* SceneDelegate.swift */,
 				10CB1BC2244820FB00821EB9 /* ViewController.swift */,
 				107F9D6B245110F6007470F4 /* Kroger.swift */,
 				107F9D69244FF8A2007470F4 /* Walmart.swift */,
+				107F9D6D2455425C007470F4 /* Sams.swift */,
+				107F9D6F245558DE007470F4 /* Walgreens.swift */,
 				10CB1BC4244820FB00821EB9 /* Main.storyboard */,
 				10CB1BC7244820FD00821EB9 /* Assets.xcassets */,
 				10CB1BC9244820FD00821EB9 /* LaunchScreen.storyboard */,
@@ -175,7 +215,6 @@
 				2C25FD2811F1F67E8B32C0D5 /* Pods-BiteThymeTests.debug.xcconfig */,
 				732245294045D1A841A36AC7 /* Pods-BiteThymeTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -291,6 +330,7 @@
 				10CB1BCB244820FD00821EB9 /* LaunchScreen.storyboard in Resources */,
 				10CB1BC8244820FD00821EB9 /* Assets.xcassets in Resources */,
 				10CB1BC6244820FB00821EB9 /* Main.storyboard in Resources */,
+				107F9D7B2457C696007470F4 /* GroceryListsCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,11 +458,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				107F9D91245A7528007470F4 /* storeCollectionViewCell.swift in Sources */,
+				107F9D7A2457C696007470F4 /* GroceryListsCell.swift in Sources */,
 				107F9D6C245110F6007470F4 /* Kroger.swift in Sources */,
+				107F9D6E2455425C007470F4 /* Sams.swift in Sources */,
+				107F9D7D2457E761007470F4 /* List.swift in Sources */,
 				107F9D6A244FF8A2007470F4 /* Walmart.swift in Sources */,
 				10CB1BC3244820FB00821EB9 /* ViewController.swift in Sources */,
+				107F9D90245A7528007470F4 /* IngredientDetail.swift in Sources */,
 				10CB1BBF244820FB00821EB9 /* AppDelegate.swift in Sources */,
+				107F9D70245558DE007470F4 /* Walgreens.swift in Sources */,
 				10CB1BC1244820FB00821EB9 /* SceneDelegate.swift in Sources */,
+				107F9D72245694F3007470F4 /* GroceryLists.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

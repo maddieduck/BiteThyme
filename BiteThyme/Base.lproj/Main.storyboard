@@ -4,35 +4,135 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Walmart-->
+        <!--Grocery Lists-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="Walmart" customModule="BiteThyme" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="GroceryLists" customModule="BiteThyme" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0VY-gO-4xB">
-                                <rect key="frame" x="0.0" y="590" width="414" height="306"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </webView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vfR-8M-rjp">
-                                <rect key="frame" x="10" y="108" width="105" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Authorization"/>
-                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pGc-e0-ILu">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="50" id="bBi-hc-jDT" customClass="IngredientDetail" customModule="BiteThyme" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bBi-hc-jDT" id="CRb-Eh-xWO">
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="jQV-R1-cqG" kind="modal" identifier="segueToList" trigger="accessoryAction" modalPresentationStyle="fullScreen" id="TLe-qJ-gI4"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="pGc-e0-ILu" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="6BD-64-A2l"/>
+                            <constraint firstItem="pGc-e0-ILu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ajg-oM-MaL"/>
+                            <constraint firstItem="pGc-e0-ILu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="gZ1-QR-aKR"/>
+                            <constraint firstItem="pGc-e0-ILu" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="jzh-dZ-gsy"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="groceryListsTableView" destination="pGc-e0-ILu" id="VN0-Kc-Azn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="131.91964285714286"/>
+        </scene>
+        <!--List-->
+        <scene sceneID="Sbp-9j-yTq">
+            <objects>
+                <viewController id="jQV-R1-cqG" customClass="List" customModule="BiteThyme" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ocu-xG-D4M">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0Lf-Gi-P5C">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="IngredientDetail" rowHeight="150" id="VoJ-Uh-Lp9" userLabel="IngredientTableViewCell" customClass="IngredientDetail" customModule="BiteThyme" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VoJ-Uh-Lp9" id="Ib7-qI-lfu">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mdT-yn-s2m">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="YDx-ag-x4l">
+                                                        <size key="itemSize" width="128" height="128"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    </collectionViewFlowLayout>
+                                                    <cells>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="storeCollectionViewCell" id="xs6-9s-4fP">
+                                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="uEQ-5h-QI5">
+                                                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jup-mg-11h">
+                                                                        <rect key="frame" x="41" y="49" width="46" height="30"/>
+                                                                        <state key="normal" title="Button"/>
+                                                                    </button>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstItem="jup-mg-11h" firstAttribute="centerY" secondItem="uEQ-5h-QI5" secondAttribute="centerY" id="6e7-t6-rg8"/>
+                                                                    <constraint firstItem="jup-mg-11h" firstAttribute="centerX" secondItem="uEQ-5h-QI5" secondAttribute="centerX" id="hGZ-W5-9vb"/>
+                                                                </constraints>
+                                                            </collectionViewCellContentView>
+                                                        </collectionViewCell>
+                                                    </cells>
+                                                </collectionView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="mdT-yn-s2m" secondAttribute="bottom" id="bsE-5H-HQR"/>
+                                                <constraint firstAttribute="trailing" secondItem="mdT-yn-s2m" secondAttribute="trailing" id="dsI-qT-Tds"/>
+                                                <constraint firstItem="mdT-yn-s2m" firstAttribute="top" secondItem="Ib7-qI-lfu" secondAttribute="top" id="hBr-cT-xPj"/>
+                                                <constraint firstItem="mdT-yn-s2m" firstAttribute="leading" secondItem="Ib7-qI-lfu" secondAttribute="leading" id="smW-c4-mt3"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="storeCollectionView" destination="mdT-yn-s2m" id="WeC-y2-LXO"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="0Lf-Gi-P5C" firstAttribute="trailing" secondItem="kL7-Vo-SYV" secondAttribute="trailing" id="6tk-TD-xwl"/>
+                            <constraint firstItem="0Lf-Gi-P5C" firstAttribute="bottom" secondItem="kL7-Vo-SYV" secondAttribute="bottom" id="QLK-W2-MOo"/>
+                            <constraint firstItem="0Lf-Gi-P5C" firstAttribute="top" secondItem="kL7-Vo-SYV" secondAttribute="top" id="Qlq-5m-t8h"/>
+                            <constraint firstItem="0Lf-Gi-P5C" firstAttribute="leading" secondItem="kL7-Vo-SYV" secondAttribute="leading" id="z8D-tI-CdI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kL7-Vo-SYV"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="7i0-zQ-l9q"/>
+                    <connections>
+                        <outlet property="listTableView" destination="0Lf-Gi-P5C" id="jUJ-3P-COB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tMz-1a-HUF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="827.536231884058" y="129.91071428571428"/>
         </scene>
     </scenes>
 </document>
