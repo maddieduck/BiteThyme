@@ -15,29 +15,10 @@ let clientSecret = "70bjcPhjGpVFWQuICAB1elT7i0EjgL2XDz3V0KI7"
 let header = clientID + ":" + clientSecret
 let headerEncoded = Data(header.utf8).base64EncodedString()
 
-let KrogerCallbackNotifier = "KrogerCallbackNotifier"
-let callbackName = Notification.Name(rawValue: KrogerCallbackNotifier)
 
-class Kroger: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        NotificationCenter.default.addObserver(forName: callbackName, object: nil, queue: nil) { (Notification) in
-            //Kroger has given an Auth key and now we have to get the access token
-            print("OBSERVER ", Notification.object)
-            self.dismiss(animated: true)
-            if Notification.object != nil{
-                self.getAccessToken(authType: .authorization_code, scope: .productCompact, authKey: Notification.object as! String)
-            }
-        }
-    }
+extension List{
     
-    deinit {
-        NotificationCenter.default.removeObserver(self)
-    }
-    
-    @IBAction func Authorization(_ sender: Any) {
+    func Authorization() {
         
         let scope = "cart.basic:write"
         let responseType = "code"   //always code
@@ -106,10 +87,7 @@ class Kroger: UIViewController {
         //Not sure if this is necessary
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
 
-        // prepare json body
-        //let json: [String: Any] = ["grant_type": "authorization_code", "scope": "coupon.basic"]
-        //let jsonData = try? JSONSerialization.data(withJSONObject: json)
-        //request.httpBody = jsonData
+
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
             if let error = error {
                 print("error: \(error)")

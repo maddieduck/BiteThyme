@@ -19,7 +19,6 @@ class GroceryLists: UIViewController, UITableViewDelegate, UITableViewDataSource
         groceryListsTableView.dataSource = self
         groceryListsTableView.delegate = self
         groceryListsTableView.register(UINib(nibName: "GroceryListsCell", bundle: nil), forCellReuseIdentifier: "GroceryListsCell")
-
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
