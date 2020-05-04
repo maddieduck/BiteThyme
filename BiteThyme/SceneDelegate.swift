@@ -58,7 +58,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if (urlString?.contains("bitethyme://callback") ?? false) && (urlString?.contains("bitethyme://callback") != nil){
             let url = urlString!
             let authKey = url.components(separatedBy: "=")[1]
-            NotificationCenter.default.post(name: callbackName, object: authKey)
+            NotificationCenter.default.post(name: krogerCallback, object: authKey)
         }
     }
     

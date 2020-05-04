@@ -9,7 +9,7 @@
 import UIKit
 
 //Kroger
-let callbackName = Notification.Name(rawValue: KrogerCallbackNotifier)
+let krogerCallback = Notification.Name(rawValue: KrogerCallbackNotifier)
 let KrogerCallbackNotifier = "KrogerCallbackNotifier"
 
 
@@ -22,18 +22,38 @@ class List: UIViewController, UITableViewDelegate, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        NotificationCenter.default.addObserver(forName: callbackName, object: nil, queue: nil) { (Notification) in
+        //Use this for the callback when using the authorization code and adding things to carts
+        NotificationCenter.default.addObserver(forName: krogerCallback, object: nil, queue: nil) { (Notification) in
             //Kroger has given an Auth key and now we have to get the access token
             print("OBSERVER ", Notification.object)
             self.dismiss(animated: true)
-            if Notification.object != nil{
-                self.getAccessToken(authType: .authorization_code, scope: .productCompact, authKey: Notification.object as! String)
+
+        }
+            
+        //Get the products for all elements in the array
+        getAccessToken(authType: .client_credentials, scope: .productCompact, authKey: nil) { (token) in
+            if token != nil{
+                let myGroup = DispatchGroup()
+                var ArrayOfProductData: [productListData] = []
+                for ingr in self.ArrayOfItems{
+                    myGroup.enter()
+                    self.getProductList(token: token!, filterTerm: ingr, filterLimit: 10) { (productData) in
+                        //print("INGR DESCRIPTION ", productData!.data![0].description )
+                        print("appending")
+                        ArrayOfProductData.append(productData!)
+                        myGroup.leave()
+                    }
+                }
+                myGroup.notify(queue: .main) {
+                    print("Finished getting product data for all ingredients")
+                    for ingr in ArrayOfProductData{
+                        print("INGR DESCRIPTION ", ingr.data![0].description )
+                    }
+                }
             }
         }
         
-        //print("header encoded ", headerEncoded)
         
-        Authorization()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
