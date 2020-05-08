@@ -15,56 +15,7 @@ let keyVersion = "2"
 let consumerId = "13c8234e-f5dc-4952-9b26-a938bf98b3be"//for Walmart IO?
 var authSignature = ""
 let publicKey = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAx4mO05BkOt4/+W/5TgU9jyzG2F+GEG5L7z4DNPXSLQhBGXKq2XYq4p4iOcT1LxWaAAMmmCVi+dTKAb4nR85cX36YahRVK3qQfLmFM1qLrTm/Kq2MdJ9bZKxqSUBAxhQeRhrJ0YtpZCV8d2plceeeLL+TQNyAR6hBVSaFPkk6YepYKyky6Pq3XxWRNtO9jfy3WsPRixxxE84RtZTOi8Vg3YrmxzOtWuyz3Eybe6lXBOIhyo0x2xEMEcD9Mv18lpquURGuPaVtiYmu9SFl1bPzQCSzuZIBsr2FgrAesJa9QVzxcTsQizBtHfHgUGse4oBe9KWA5tZcheW0euiqzq5+9wIDAQAB"
-let publicKey = "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"
-
+let privateKey = "MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDWuFQP6Sdd9Nvig152x1Y4cniGmWTcS5altEhVUf6CSpIGaMWWu8ey7DU6TZ0+EDbotZ2PllQ48MfSe29SmngwVPCc633gSIu93xZQEJJ3SPTr9VR2nuZcSXXyZenv3LZrSk9kxparxEqBCGwrvVQqFKENAj58LV3855ZT4jU3X9wnaABix1eZNYPhkzfDP1V4hdb+LJcAIF3zEfnvEDPuW11Ghu2ORFWY0zfD2n77Hkr+N7eMZQVlr3ArdnLbiDee5yTfiQD5ksXUjJfxYzVuE1Z6QBotasEyzoDyuFQo0QRH+K6R8+ok5Ag3EkmvOMEUj/3YITeWhDhwvsTihBljAgMBAAECggEARjpVrDqK2K0seeKTs++woJe4GfXzyiWi6SGVAurlfkHbjuMXtRxHzZp6Mk6OXm05OFWmaf82HsWJ5arflznUk6JEbF6NdhzkL77WcmtpLECdcstzy7RfDdItFJIGuKAMvfy5CPH298kkwR07G/c5nuXOYw3X2A+SjRRF07vJwgkr6nAEl8dF2njhsPiO6rIkqBgRUpks+typgohyDW1HCjA++z3ksKFZsyPyQ7KTyxykEhWXopKERtRarz1DCr5FNyOxkip/k6EkmlwLUJFb1cVpZwxkl+A+afA0ACH3D6IDok5s6T1oDCo9hv/9xum5gzZgwZQ8OVyrPEwWMhHXIQKBgQDyShyyVoB0J+Bg+xnbBMhfvoUpgG4C4QT44yhAQMAJ9SumUMR4VNqPHYAuZG+Pf0BRSF/tTNl4Snkf/vTiCUiVU0l2eg4qEL3qmPc5EuTDjlOo1Y7P3dzASeFLPSbkRljS7gP2v5LiOUXfMtjkbRiSP/tL6i63fYyG5fEmFsbf0wKBgQDi3tXqexw+fOWJx59CT5iotvjvAMQdADDN5W6VyyC7fooZEQ0RMdc93vIjNbnu4ONxdHhzpZ7vxqK58lgMVisLadte56ibxAzUsaIU+E6MWaw4j04POaEPrmj6CZ+7CQt1sqUB33cAtj2gwUbq80iOssJjwCVI47PisDqecph2MQKBgH55VVV6df8sOaImMS705iukZhpt4f86ur+4w/AWXKhWBH0CuCwgDx6Zxalx4BJF2KsVXo2eif6S0Xt0ORwswGjCWxyvRemLZ7eoNZTjWesCxoThRXUYWP0/E42U1FJgrkkc2ZDaG7BfOSvzfOhwUl01bNYJ3m0F6m8YZLL/PLzlAoGBAN3cgWGvRy2swmR8/TfB006asNI5849Q0mloBz8hyD7TPoXI8Phxv0ZYMn9QWSZMcuBOwESIIOfnXtdtMcHOuoWM3eTvsymxDcMqe5D6SwZh41PkgLfO6b0GGM78fmJQNA7Dxy4PtLbTgW0l1g6KH9i84/DcxRmE5DO5l3nAI2zhAoGAIOXKWzp4TTRukKju3rnKB1Pj/7lkaEwWx1Q4mocGieuoeSWJwvZUDlbEeEd+RvvjJKg5Jmrq+SaupyQRjxIhdz3k77BIIh2Nc09/1otNr3+Fnkhw5hUDH27MrumTUPJtpIfU0df02FQajOI7SxuH5WJcjywzjsFKpdQ71gNA6yM="
 
 let publisherID = "2263813"
 
@@ -85,7 +36,7 @@ class Walmart: UIViewController {
 //        let apiKey = "apiKey_example" // Your API access key
 //        let lsPublisherId = "lsPublisherId_example" // Your Rakuten access key (optional)
 //        let format = "json" // Type of response required, (currently only JSON supported)
-//        let apiInstance = WMTOAProductLookupApi()
+        let apiInstance = WMTOAProductLookupApi()
 //
 //        apiInstance.getItemWithItemId(itemId, apiKey: apiKey, lsPublisherId: lsPublisherId, format: format) { (output, error) in
 //            if (output != nil) {
@@ -95,12 +46,19 @@ class Walmart: UIViewController {
 //                print(error)
 //            }
 //        }
+        
+//        let a = WMTOAItem()
+//        a.affiliateAddToCartUrl()
+//
+//        let b = WMTOASearchApi()
+//        b.defaultHeader(forKey: <#T##String!#>)
+        
         print("RUNNING")
         searchProduct(query: "cheese")
     }
     
     func searchProduct(query: String){
-        let finalURL = "https://developer.api.walmart.com/api-proxy/service/affil/product/search?publisherId=" + publisherID + "&query=" + query
+        let finalURL = "https://developer.api.walmart.com/api-proxy/service/affil/product/search?query=" + query
         print("finalURL ", finalURL)
         let session = URLSession.shared
         let url = URL(string: finalURL)!
@@ -115,7 +73,8 @@ class Walmart: UIViewController {
         request.setValue(keyVersion, forHTTPHeaderField: "WM_SEC.KEY_VERSION")
         request.setValue(consumerId, forHTTPHeaderField: "WM_CONSUMER.ID")
         request.setValue(timeStamp.stringFromTimeInterval(), forHTTPHeaderField: "WM_CONSUMER.INTIMESTAMP")
-        request.setValue("application/json", forHTTPHeaderField: "WM_SEC.AUTH_SIGNATURE")
+        let authSig = authenticationSignature()
+        request.setValue(authSig, forHTTPHeaderField: "WM_SEC.AUTH_SIGNATURE")
         
         let task = session.dataTask(with: request, completionHandler: { data, response, error in
 
@@ -130,9 +89,25 @@ class Walmart: UIViewController {
         task.resume()
     }
     
-    
+    func authenticationSignature() -> String{
+        var headerDictionary: [String: String] = [:]
+        headerDictionary["WM_CONSUMER.ID"] = consumerId
+        let timeStamp = NSDate().timeIntervalSince1970
+        headerDictionary["WM_CONSUMER.INTIMESTAMP"] = timeStamp.stringFromTimeInterval()
+        headerDictionary["WM_SEC.KEY_VERSION"] = keyVersion
+        
+        var canonicalizedArray = canonicalizeArray(dictionary: headerDictionary)
+        
+        return ""
+    }
+
+    func canonicalizeArray(dictionary: [String: String]) -> [String] {
+        return [""]
+    }
     
 }
+
+
 
 extension TimeInterval{
 
@@ -148,4 +123,5 @@ extension TimeInterval{
         return String(format: "%0.2d:%0.2d:%0.2d.%0.3d",hours,minutes,seconds,ms)
 
     }
+
 }
