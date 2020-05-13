@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import WalmartSDKKit
+import WalmartOpenApi
+import SafariServices
 
 //Kroger
 let krogerCallback = Notification.Name(rawValue: KrogerCallbackNotifier)
@@ -29,8 +32,14 @@ class List: UIViewController, UITableViewDelegate, UITableViewDataSource {
             self.dismiss(animated: true)
 
         }
-            
-        //Get the products for all elements in the array
+        
+        //searchStoreByGeoLocation()
+        //searchStoreByAddress()
+        
+        //searchProduct(query: "Cheese")
+
+        
+        //Get the Kroger products for all elements in the array
         getAccessToken(authType: .client_credentials, scope: .productCompact, authKey: nil) { (token) in
             if token != nil{
                 let myGroup = DispatchGroup()

@@ -25,6 +25,7 @@ extension List{
         case productCompact
         case NA
     }
+    
     //When making an API request that is either returning personalized customer data or acting on behalf of a customer
     func AuthorizationCustomerContext(scope: authorizationCustomerScope) {
         //TODO build case for each
@@ -133,12 +134,7 @@ extension List{
                     print("statusCode: \(response.statusCode)")
                     completion(nil)
                 }
-//                if let data = data, let dataString = String(data: data, encoding: .utf8) {
-//                    print("data: \(dataString)")
-//
-//                    //completion(dataString)
-//                }
-                
+            
                 if let data = data{
                     let decodedData: accessTokenData = try! JSONDecoder().decode(accessTokenData.self, from: data)
                     completion(decodedData.access_token)
@@ -146,7 +142,6 @@ extension List{
             }
         }
         task.resume()
-        
     }
     
     func getIdentity(token: String){
@@ -247,7 +242,6 @@ extension List{
     }
 
     func getProductList(token: String, filterTerm: String, filterLimit: Int, completion: @escaping (productListData?) -> ()){
-        //print("GET PRODUCT TOKEN")
         let finalURL = "https://api.kroger.com/v1/products?filter.term=" + filterTerm + "&filter.limit" + String(filterLimit)
         let url = URL(string:finalURL)!
         var request = URLRequest(url: url)
@@ -262,9 +256,7 @@ extension List{
                 if let response = response as? HTTPURLResponse {
                     print("statusCode: \(response.statusCode)")
                 }
-//                if let data = data, let identity = String(data: data, encoding: .utf8) {
-//                    print("data: \(identity)")
-//                }
+
                 if let data = data{
                     //print(String(data: data, encoding: .utf8))
                     let decodedData: productListData = try! JSONDecoder().decode(productListData.self, from: data)

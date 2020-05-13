@@ -7,9 +7,8 @@
 //
 
 import UIKit
-import WalmartSDKKit
-import WalmartOpenApi
-import SafariServices
+
+
 
 let keyVersion = "2"
 let consumerId = "13c8234e-f5dc-4952-9b26-a938bf98b3be"//for Walmart IO?
@@ -28,10 +27,10 @@ let readOnlyAuthToken = "msg.paw5jkivqBUAJGBqta.d9DWrUPXP"
 let APIVersion = "11 (2018-05-30)"
 
 
-class Walmart: UIViewController {
+extension List{
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
 
 //        let itemId = "itemId_example" //
 //        let apiKey = "apiKey_example" // Your API access key
@@ -47,9 +46,9 @@ class Walmart: UIViewController {
 //                print(error)
 //            }
 //        }
-        print("RUNNING")
-        searchProduct(query: "cheese")
-    }
+        
+//    }    
+
     
     func searchProduct(query: String){
         let finalURL = "https://developer.api.walmart.com/api-proxy/service/affil/product/search?publisherId=" + publisherID + "&query=" + query
@@ -58,31 +57,109 @@ class Walmart: UIViewController {
         let url = URL(string: finalURL)!
         var request = URLRequest(url: url)
         let timeStamp = NSDate().timeIntervalSince1970
-        
-        //make the signature
-        
-        //signatureBytes =
-        //signatureString = Data(signatureBytes.utf8).base64EncodedString()
-        
+        let requestMethod = "GET"
+        let time = timeStamp.stringFromTimeInterval()
+        request.httpMethod = requestMethod
+
         request.setValue(keyVersion, forHTTPHeaderField: "WM_SEC.KEY_VERSION")
         request.setValue(consumerId, forHTTPHeaderField: "WM_CONSUMER.ID")
-        request.setValue(timeStamp.stringFromTimeInterval(), forHTTPHeaderField: "WM_CONSUMER.INTIMESTAMP")
-        request.setValue("application/json", forHTTPHeaderField: "WM_SEC.AUTH_SIGNATURE")
+        request.setValue(time, forHTTPHeaderField: "WM_CONSUMER.INTIMESTAMP")
         
-        let task = session.dataTask(with: request, completionHandler: { data, response, error in
+        let inputForSignature = consumerId + "\n" + finalURL + "\n" + requestMethod + "\n" + time + "\n"
+        
+        
+        if let data = (inputForSignature).data(using: String.Encoding.utf8) {
+            let base64 = data.base64EncodedString(options: Data.Base64EncodingOptions(rawValue: 0))
+            print(base64)// dGVzdDEyMw==\n
+        }
 
-            if let data = data {
-               if let jsonString = String(data: data, encoding: .utf8) {
-                  print("JSON STRING ", jsonString)
-               }
-            }else{
-                print("DATA IS NIL ")
+        
+        //request.setValue(signature, forHTTPHeaderField: "WM_SEC.AUTH_SIGNATURE")
+        
+        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+            if let error = error {
+                print("error: \(error)")
+            } else {
+                if let response = response as? HTTPURLResponse {
+                    print("statusCode: \(response.statusCode)")
+                }
+                if let data = data, let identity = String(data: data, encoding: .utf8) {
+                    print("data: \(identity)")
+                }
             }
-        })
+        }
         task.resume()
+        
     }
     
 }
+
+
+//func generateSignature() {
+//    // This example requires the Chilkat API to have been previously unlocked.
+//    // See Global Unlock Sample for sample code.
+//
+//    var success: Bool
+//
+//    var consumerId: String? = "b68d2a72...."
+//    var baseUrl: String? = "https://marketplace.walmartapis.com/v2/feeds"
+//    // This is your Base64 encoded private key
+//    var privateEncodedStr: String? = "MIICeAIBADANBgkqhkiG9w0BAQEFAA......"
+//    var httpMethod: String? = "GET"
+//
+//    // We need a timestamp in decimal string form representing the number of milliseconds since Jan 01 1970 UTC.
+//    let dt = CkoDateTime()!
+//    // Set bLocal = true for a timestamp in the local timezone.  Set bLocal = false for a UTC timestamp.
+//    var bLocal: Bool = false
+//    // This gets the timestamp in seconds, not milliseconds.
+//    var timeStampVal: Int = dt.getAsUnixTime(bLocal)
+//
+//    // Build the string to sign.
+//    let sbStringToSign = CkoStringBuilder()!
+//    sbStringToSign.append(consumerId)
+//    sbStringToSign.append("\n")
+//    sbStringToSign.append(baseUrl)
+//    sbStringToSign.append("\n")
+//    sbStringToSign.append(httpMethod)
+//    sbStringToSign.append("\n")
+//    sbStringToSign.appendInt(timeStampVal)
+//    // We add three zero's so that the timestamp value is in milliseconds.
+//    // We don't care about accuracy down to less than a second.
+//    // All the server cares about is that the request was signed at the current date/time
+//    // within some reasonable margin of error (to account for systems having clocks
+//    // that may be slightly different).
+//    sbStringToSign.append("000\n")
+//
+//    let privKey = CkoPrivateKey()!
+//    // Load the private key into a private key object.
+//    // Note: Technically the private key is not PEM because it lacks the header/footer strings
+//    // used for PEM.  However, the LoadPem method will still accept it and load it correctly.
+//    success = privKey.loadPem(privateEncodedStr)
+//    if success != true {
+//        print("\(privKey.lastErrorText!)")
+//        return
+//    }
+//
+//    let rsa = CkoRsa()!
+//    success = rsa.importPrivateKeyObj(privKey)
+//    if success != true {
+//        print("\(rsa.lastErrorText!)")
+//        return
+//    }
+//
+//    // We want a base64 signature string.
+//    rsa.encodingMode = "base64"
+//
+//    var signatureString: String? = rsa.signStringENC(sbStringToSign.getAsString(), hashAlg: "SHA256")
+//    if rsa.lastMethodSuccess != true {
+//        print("\(rsa.lastErrorText!)")
+//        return
+//    }
+//
+//    print("Signature String: \(signatureString!)")
+//
+//}
+
 
 extension TimeInterval{
 
