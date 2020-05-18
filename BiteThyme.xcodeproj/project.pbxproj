@@ -60,6 +60,7 @@
 		107F9D94245AA445007470F4 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		107F9D96245BDB06007470F4 /* ListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCollectionViewCell.swift; sourceTree = "<group>"; };
 		107F9D9B246A3226007470F4 /* libchilkatIos.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libchilkatIos.a; path = "chilkat-9.5-2.0-ios/lib/arm64/libchilkatIos.a"; sourceTree = "<group>"; };
+		107F9D9E2470D46F007470F4 /* Walmart-BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Walmart-BridgingHeader.h"; sourceTree = "<group>"; };
 		10CB1BBB244820FB00821EB9 /* BiteThyme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BiteThyme.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10CB1BBE244820FB00821EB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10CB1BC0244820FB00821EB9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -128,9 +129,9 @@
 		107F9D7E2457EB85007470F4 /* List */ = {
 			isa = PBXGroup;
 			children = (
-				107F9D99245BE80C007470F4 /* stores */,
-				107F9D69244FF8A2007470F4 /* Walmart.swift */,
+				107F9D99245BE80C007470F4 /* Stores */,
 				107F9D6D2455425C007470F4 /* Sams.swift */,
+				107F9D69244FF8A2007470F4 /* Walmart.swift */,
 				107F9D6F245558DE007470F4 /* Walgreens.swift */,
 				107F9D94245AA445007470F4 /* ListTableViewCell.swift */,
 				107F9D96245BDB06007470F4 /* ListCollectionViewCell.swift */,
@@ -138,13 +139,14 @@
 			path = List;
 			sourceTree = "<group>";
 		};
-		107F9D99245BE80C007470F4 /* stores */ = {
+		107F9D99245BE80C007470F4 /* Stores */ = {
 			isa = PBXGroup;
 			children = (
 				107F9D7C2457E761007470F4 /* List.swift */,
 				107F9D6B245110F6007470F4 /* Kroger.swift */,
+				107F9D9E2470D46F007470F4 /* Walmart-BridgingHeader.h */,
 			);
-			path = stores;
+			path = Stores;
 			sourceTree = "<group>";
 		};
 		10CB1BB2244820FB00821EB9 = {
@@ -672,9 +674,10 @@
 				"OTHER_LDFLAGS[arch=*]" = "";
 				PRODUCT_BUNDLE_IDENTIFIER = Maddie.BiteThyme;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "BiteThyme/List/Stores/Walmart-BridgingHeader.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "Pods/**";
 			};
 			name = Debug;
 		};
@@ -696,9 +699,10 @@
 				"OTHER_LDFLAGS[arch=*]" = "";
 				PRODUCT_BUNDLE_IDENTIFIER = Maddie.BiteThyme;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "BiteThyme/List/Stores/Walmart-BridgingHeader.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "Pods/**";
 			};
 			name = Release;
 		};

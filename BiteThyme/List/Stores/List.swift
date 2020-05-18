@@ -36,8 +36,7 @@ class List: UIViewController, UITableViewDelegate, UITableViewDataSource {
         //searchStoreByGeoLocation()
         //searchStoreByAddress()
         
-        //searchProduct(query: "Cheese")
-
+        searchProduct(query: "Cheese")
         
         //Get the Kroger products for all elements in the array
         getAccessToken(authType: .client_credentials, scope: .productCompact, authKey: nil) { (token) in
@@ -48,15 +47,15 @@ class List: UIViewController, UITableViewDelegate, UITableViewDataSource {
                     myGroup.enter()
                     self.getProductList(token: token!, filterTerm: ingr, filterLimit: 10) { (productData) in
                         //print("INGR DESCRIPTION ", productData!.data![0].description )
-                        print("appending")
+                        //print("appending")
                         ArrayOfProductData.append(productData!)
                         myGroup.leave()
                     }
                 }
                 myGroup.notify(queue: .main) {
-                    print("Finished getting product data for all ingredients")
+                    //print("Finished getting product data for all ingredients")
                     for ingr in ArrayOfProductData{
-                        print("INGR DESCRIPTION ", ingr.data![0].description )
+                        //print("INGR DESCRIPTION ", ingr.data![0].description )
                     }
                 }
             }
