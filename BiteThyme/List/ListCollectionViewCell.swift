@@ -9,7 +9,7 @@
 import UIKit
 
 class ListCollectionViewCell: UICollectionViewCell {
-    
+     
     @IBOutlet weak var storeName: UILabel!
     @IBOutlet weak var itemPicture: UIImageView!
     @IBOutlet weak var addItem: UIButton!

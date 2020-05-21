@@ -16,11 +16,14 @@ let krogerCallback = Notification.Name(rawValue: KrogerCallbackNotifier)
 let KrogerCallbackNotifier = "KrogerCallbackNotifier"
 
 
+
 class List: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     let ArrayOfItems = ["milk", "eggs", "cheese"]
+    var listTitle: String = ""
     
     @IBOutlet weak var ListTableView: UITableView!
+    @IBOutlet weak var groceryListTitle: UINavigationItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,36 +36,43 @@ class List: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
         }
         
-        //searchStoreByGeoLocation()
-        //searchStoreByAddress()
+        groceryListTitle.title = listTitle
         
-        searchProduct(query: "Cheese")
+        
+        //searchProduct(query: "Cheese")
         
         //Get the Kroger products for all elements in the array
-        getAccessToken(authType: .client_credentials, scope: .productCompact, authKey: nil) { (token) in
-            if token != nil{
-                let myGroup = DispatchGroup()
-                var ArrayOfProductData: [productListData] = []
-                for ingr in self.ArrayOfItems{
-                    myGroup.enter()
-                    self.getProductList(token: token!, filterTerm: ingr, filterLimit: 10) { (productData) in
-                        //print("INGR DESCRIPTION ", productData!.data![0].description )
-                        //print("appending")
-                        ArrayOfProductData.append(productData!)
-                        myGroup.leave()
-                    }
-                }
-                myGroup.notify(queue: .main) {
-                    //print("Finished getting product data for all ingredients")
-                    for ingr in ArrayOfProductData{
-                        //print("INGR DESCRIPTION ", ingr.data![0].description )
-                    }
-                }
-            }
-        }
+        //THIS WORKS 
+//        getAccessToken(authType: .client_credentials, scope: .productCompact, authKey: nil) { (token) in
+//            if token != nil{
+//                let myGroup = DispatchGroup()
+//                var ArrayOfProductData: [productListData] = []
+//                for ingr in self.ArrayOfItems{
+//                    myGroup.enter()
+//                    self.getProductList(token: token!, filterTerm: ingr, filterLimit: 10) { (productData) in
+//                        //print("INGR DESCRIPTION ", productData!.data![0].description )
+//                        //print("appending")
+//                        ArrayOfProductData.append(productData!)
+//                        myGroup.leave()
+//                    }
+//                }
+//                myGroup.notify(queue: .main) {
+//                    //print("Finished getting product data for all ingredients")
+//                    for ingr in ArrayOfProductData{
+//                        //print("INGR DESCRIPTION ", ingr.data![0].description )
+//                    }
+//                }
+//            }
+//        }
         
         
     }
+    
+    @IBAction func backButtonPressed(_ sender: Any) {
+        
+        dismiss(animated: true)
+    }
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //ArrayOfItems.count

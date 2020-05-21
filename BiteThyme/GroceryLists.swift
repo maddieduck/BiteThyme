@@ -10,7 +10,7 @@ import UIKit
 
 class GroceryLists: UIViewController, UITableViewDelegate, UITableViewDataSource{
 
-    let listsArray = ["List Number 1 ", "List Number Two", "Threee", "Fourrrr", "Five"]
+    var listsArray = ["List Number 1 ", "List Number Two", "Threee", "Fourrrr", "Five"]
     
     @IBOutlet weak var groceryListsTableView: UITableView!
     
@@ -41,7 +41,16 @@ class GroceryLists: UIViewController, UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "segueToList", sender: nil)
+        performSegue(withIdentifier: "segueToList", sender: listsArray[indexPath.row])
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueToList"{
+            let destination = segue.destination as! List
+            destination.listTitle = sender as! String
+        }
+        
     }
 
 }

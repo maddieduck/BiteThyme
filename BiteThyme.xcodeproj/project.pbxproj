@@ -17,6 +17,22 @@
 		107F9D7D2457E761007470F4 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107F9D7C2457E761007470F4 /* List.swift */; };
 		107F9D95245AA445007470F4 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107F9D94245AA445007470F4 /* ListTableViewCell.swift */; };
 		107F9D97245BDB06007470F4 /* ListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107F9D96245BDB06007470F4 /* ListCollectionViewCell.swift */; };
+		107F9DA22474564F007470F4 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107F9DA12474564F007470F4 /* SignUp.swift */; };
+		107F9DA524745691007470F4 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107F9DA424745691007470F4 /* Login.swift */; };
+		107F9DA7247485D9007470F4 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107F9DA6247485D9007470F4 /* Utilities.swift */; };
+		107F9DAA24748E1C007470F4 /* Initial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107F9DA924748E1C007470F4 /* Initial.swift */; };
+		107F9DB02474BF18007470F4 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 107F9DAE2474BEFA007470F4 /* libsqlite3.tbd */; };
+		107F9DB12474BF28007470F4 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 107F9DAF2474BF07007470F4 /* libz.tbd */; };
+		107F9DB22474BF36007470F4 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 107F9DAD2474BEEE007470F4 /* libc++.tbd */; };
+		10BDE2372474FAFF004DDE3E /* GoogleUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10BDE2362474FAFF004DDE3E /* GoogleUtilities.framework */; };
+		10BDE24124762B7C004DDE3E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BDE24024762B7C004DDE3E /* Constants.swift */; };
+		10BDE243247635F6004DDE3E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 10BDE242247635F6004DDE3E /* GoogleService-Info.plist */; };
+		10BDE245247636B1004DDE3E /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10BDE244247636B1004DDE3E /* SafariServices.framework */; };
+		10BDE2542476398D004DDE3E /* FirebaseAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10BDE2532476398D004DDE3E /* FirebaseAuth.framework */; };
+		10BDE25B24763FFB004DDE3E /* FirebaseAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10BDE25A24763FFB004DDE3E /* FirebaseAuth.framework */; };
+		10BDE25C24763FFB004DDE3E /* FirebaseAuth.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 10BDE25A24763FFB004DDE3E /* FirebaseAuth.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		10BDE26A24764E31004DDE3E /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 107F9DAD2474BEEE007470F4 /* libc++.tbd */; };
+		10BDE26F24764F18004DDE3E /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10BDE26D24764F03004DDE3E /* MobileCoreServices.framework */; };
 		10CB1BBF244820FB00821EB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CB1BBE244820FB00821EB9 /* AppDelegate.swift */; };
 		10CB1BC1244820FB00821EB9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CB1BC0244820FB00821EB9 /* SceneDelegate.swift */; };
 		10CB1BC3244820FB00821EB9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CB1BC2244820FB00821EB9 /* ViewController.swift */; };
@@ -26,9 +42,9 @@
 		10CB1BD6244820FD00821EB9 /* BiteThymeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CB1BD5244820FD00821EB9 /* BiteThymeTests.swift */; };
 		10CB1BE1244820FD00821EB9 /* BiteThymeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CB1BE0244820FD00821EB9 /* BiteThymeUITests.swift */; };
 		10CB1BF02449414E00821EB9 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10CB1BEF2449414E00821EB9 /* WebKit.framework */; };
-		53FE496E92F109455CA80FAB /* Pods_BiteThymeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CF8DA437D12F7F49E5593CF /* Pods_BiteThymeTests.framework */; };
-		7076B7F1A57AFFED6ADF2F07 /* Pods_BiteThyme.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1A044EDD2D081B0089DBA29 /* Pods_BiteThyme.framework */; };
-		F2914B2E7BAF224F62D2E161 /* Pods_BiteThyme_BiteThymeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93EE63C4F16CF7CBEF8B8520 /* Pods_BiteThyme_BiteThymeUITests.framework */; };
+		64EA4F87085BB83F5F6C6156 /* Pods_BiteThyme_BiteThymeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87BE37796232C3201F1557C6 /* Pods_BiteThyme_BiteThymeUITests.framework */; };
+		6D65960779FD3426B22FDF2E /* Pods_BiteThymeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DEEB6D6602322A5DB92F355 /* Pods_BiteThymeTests.framework */; };
+		F54E0496856218C136881CC6 /* Pods_BiteThyme.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3191097BAB680B07D15E4B4B /* Pods_BiteThyme.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +64,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		10BDE25D24763FFC004DDE3E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				10BDE25C24763FFB004DDE3E /* FirebaseAuth.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		107F9D69244FF8A2007470F4 /* Walmart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Walmart.swift; sourceTree = "<group>"; };
 		107F9D6B245110F6007470F4 /* Kroger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kroger.swift; sourceTree = "<group>"; };
@@ -61,6 +91,32 @@
 		107F9D96245BDB06007470F4 /* ListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCollectionViewCell.swift; sourceTree = "<group>"; };
 		107F9D9B246A3226007470F4 /* libchilkatIos.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libchilkatIos.a; path = "chilkat-9.5-2.0-ios/lib/arm64/libchilkatIos.a"; sourceTree = "<group>"; };
 		107F9D9E2470D46F007470F4 /* Walmart-BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Walmart-BridgingHeader.h"; sourceTree = "<group>"; };
+		107F9DA12474564F007470F4 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
+		107F9DA424745691007470F4 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		107F9DA6247485D9007470F4 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		107F9DA924748E1C007470F4 /* Initial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Initial.swift; sourceTree = "<group>"; };
+		107F9DAD2474BEEE007470F4 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		107F9DAE2474BEFA007470F4 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		107F9DAF2474BF07007470F4 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		10BDE22E2474F4E2004DDE3E /* GoogleUtilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GoogleUtilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		10BDE2342474F9B5004DDE3E /* GoogleUtilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GoogleUtilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		10BDE2362474FAFF004DDE3E /* GoogleUtilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GoogleUtilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		10BDE24024762B7C004DDE3E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		10BDE242247635F6004DDE3E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		10BDE244247636B1004DDE3E /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
+		10BDE2462476388F004DDE3E /* FirebaseFirestore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseFirestore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		10BDE2492476389B004DDE3E /* FirebaseAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		10BDE24C247638A1004DDE3E /* FirebaseCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		10BDE24F24763950004DDE3E /* FirebaseFirestore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseFirestore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		10BDE2532476398D004DDE3E /* FirebaseAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		10BDE257247639A4004DDE3E /* FirebaseFirestore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseFirestore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		10BDE25A24763FFB004DDE3E /* FirebaseAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		10BDE25E24764006004DDE3E /* FirebaseCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		10BDE2612476401E004DDE3E /* FirebaseFirestore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseFirestore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		10BDE26424764026004DDE3E /* FirebaseCoreDiagnostics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseCoreDiagnostics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		10BDE26724764300004DDE3E /* FirebaseInstallations.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseInstallations.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		10BDE26B24764E7F004DDE3E /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
+		10BDE26D24764F03004DDE3E /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		10CB1BBB244820FB00821EB9 /* BiteThyme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BiteThyme.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10CB1BBE244820FB00821EB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10CB1BC0244820FB00821EB9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,15 +132,15 @@
 		10CB1BE0244820FD00821EB9 /* BiteThymeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiteThymeUITests.swift; sourceTree = "<group>"; };
 		10CB1BE2244820FD00821EB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10CB1BEF2449414E00821EB9 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
-		2C25FD2811F1F67E8B32C0D5 /* Pods-BiteThymeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BiteThymeTests.debug.xcconfig"; path = "Target Support Files/Pods-BiteThymeTests/Pods-BiteThymeTests.debug.xcconfig"; sourceTree = "<group>"; };
-		65AA7F3892BDC93619C0C348 /* Pods-BiteThyme.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BiteThyme.release.xcconfig"; path = "Target Support Files/Pods-BiteThyme/Pods-BiteThyme.release.xcconfig"; sourceTree = "<group>"; };
-		66296385A3991E1492A6B2C3 /* Pods-BiteThyme.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BiteThyme.debug.xcconfig"; path = "Target Support Files/Pods-BiteThyme/Pods-BiteThyme.debug.xcconfig"; sourceTree = "<group>"; };
-		6CF8DA437D12F7F49E5593CF /* Pods_BiteThymeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BiteThymeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		732245294045D1A841A36AC7 /* Pods-BiteThymeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BiteThymeTests.release.xcconfig"; path = "Target Support Files/Pods-BiteThymeTests/Pods-BiteThymeTests.release.xcconfig"; sourceTree = "<group>"; };
-		87E9B45C4E32180008FEFAB3 /* Pods-BiteThyme-BiteThymeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BiteThyme-BiteThymeUITests.release.xcconfig"; path = "Target Support Files/Pods-BiteThyme-BiteThymeUITests/Pods-BiteThyme-BiteThymeUITests.release.xcconfig"; sourceTree = "<group>"; };
-		913BD516A0FA07184636A532 /* Pods-BiteThyme-BiteThymeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BiteThyme-BiteThymeUITests.debug.xcconfig"; path = "Target Support Files/Pods-BiteThyme-BiteThymeUITests/Pods-BiteThyme-BiteThymeUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		93EE63C4F16CF7CBEF8B8520 /* Pods_BiteThyme_BiteThymeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BiteThyme_BiteThymeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F1A044EDD2D081B0089DBA29 /* Pods_BiteThyme.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BiteThyme.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3191097BAB680B07D15E4B4B /* Pods_BiteThyme.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BiteThyme.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C0D655B8FD293A2B988C8B1 /* Pods-BiteThyme.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BiteThyme.release.xcconfig"; path = "Target Support Files/Pods-BiteThyme/Pods-BiteThyme.release.xcconfig"; sourceTree = "<group>"; };
+		535CD4C5621729A91A5C531E /* Pods-BiteThymeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BiteThymeTests.debug.xcconfig"; path = "Target Support Files/Pods-BiteThymeTests/Pods-BiteThymeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		63494CCD455C106B0DDA5AE6 /* Pods-BiteThyme-BiteThymeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BiteThyme-BiteThymeUITests.debug.xcconfig"; path = "Target Support Files/Pods-BiteThyme-BiteThymeUITests/Pods-BiteThyme-BiteThymeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7DEEB6D6602322A5DB92F355 /* Pods_BiteThymeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BiteThymeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		87BE37796232C3201F1557C6 /* Pods_BiteThyme_BiteThymeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BiteThyme_BiteThymeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		99D8CA269A632F982D813893 /* Pods-BiteThymeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BiteThymeTests.release.xcconfig"; path = "Target Support Files/Pods-BiteThymeTests/Pods-BiteThymeTests.release.xcconfig"; sourceTree = "<group>"; };
+		C7DB2F64E57CF841413C6946 /* Pods-BiteThyme.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BiteThyme.debug.xcconfig"; path = "Target Support Files/Pods-BiteThyme/Pods-BiteThyme.debug.xcconfig"; sourceTree = "<group>"; };
+		D56130CFD4E877C156D28E4D /* Pods-BiteThyme-BiteThymeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BiteThyme-BiteThymeUITests.release.xcconfig"; path = "Target Support Files/Pods-BiteThyme-BiteThymeUITests/Pods-BiteThyme-BiteThymeUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,8 +148,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10BDE25B24763FFB004DDE3E /* FirebaseAuth.framework in Frameworks */,
+				10BDE2372474FAFF004DDE3E /* GoogleUtilities.framework in Frameworks */,
+				107F9DB02474BF18007470F4 /* libsqlite3.tbd in Frameworks */,
+				10BDE245247636B1004DDE3E /* SafariServices.framework in Frameworks */,
+				107F9DB22474BF36007470F4 /* libc++.tbd in Frameworks */,
+				107F9DB12474BF28007470F4 /* libz.tbd in Frameworks */,
+				10BDE26A24764E31004DDE3E /* libc++.tbd in Frameworks */,
+				10BDE2542476398D004DDE3E /* FirebaseAuth.framework in Frameworks */,
 				10CB1BF02449414E00821EB9 /* WebKit.framework in Frameworks */,
-				7076B7F1A57AFFED6ADF2F07 /* Pods_BiteThyme.framework in Frameworks */,
+				10BDE26F24764F18004DDE3E /* MobileCoreServices.framework in Frameworks */,
+				F54E0496856218C136881CC6 /* Pods_BiteThyme.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,7 +166,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				53FE496E92F109455CA80FAB /* Pods_BiteThymeTests.framework in Frameworks */,
+				6D65960779FD3426B22FDF2E /* Pods_BiteThymeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,7 +174,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2914B2E7BAF224F62D2E161 /* Pods_BiteThyme_BiteThymeUITests.framework in Frameworks */,
+				64EA4F87085BB83F5F6C6156 /* Pods_BiteThyme_BiteThymeUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,6 +214,25 @@
 			path = Stores;
 			sourceTree = "<group>";
 		};
+		107F9DA32474565C007470F4 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				107F9DA924748E1C007470F4 /* Initial.swift */,
+				107F9DA12474564F007470F4 /* SignUp.swift */,
+				107F9DA424745691007470F4 /* Login.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		107F9DA8247489FC007470F4 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				107F9DA6247485D9007470F4 /* Utilities.swift */,
+				10BDE24024762B7C004DDE3E /* Constants.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		10CB1BB2244820FB00821EB9 = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +258,8 @@
 		10CB1BBD244820FB00821EB9 /* BiteThyme */ = {
 			isa = PBXGroup;
 			children = (
+				107F9DA8247489FC007470F4 /* Helpers */,
+				107F9DA32474565C007470F4 /* Login */,
 				107F9D772456A52B007470F4 /* Grocery Lists */,
 				107F9D7E2457EB85007470F4 /* List */,
 				10CB1BBE244820FB00821EB9 /* AppDelegate.swift */,
@@ -182,6 +268,7 @@
 				10CB1BC4244820FB00821EB9 /* Main.storyboard */,
 				10CB1BC7244820FD00821EB9 /* Assets.xcassets */,
 				10CB1BC9244820FD00821EB9 /* LaunchScreen.storyboard */,
+				10BDE242247635F6004DDE3E /* GoogleService-Info.plist */,
 				10CB1BCC244820FD00821EB9 /* Info.plist */,
 			);
 			path = BiteThyme;
@@ -208,11 +295,31 @@
 		10CB1BEE2449414E00821EB9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				10BDE26D24764F03004DDE3E /* MobileCoreServices.framework */,
+				10BDE26B24764E7F004DDE3E /* CoreServices.framework */,
+				10BDE26724764300004DDE3E /* FirebaseInstallations.framework */,
+				10BDE26424764026004DDE3E /* FirebaseCoreDiagnostics.framework */,
+				10BDE2612476401E004DDE3E /* FirebaseFirestore.framework */,
+				10BDE25E24764006004DDE3E /* FirebaseCore.framework */,
+				10BDE25A24763FFB004DDE3E /* FirebaseAuth.framework */,
+				10BDE257247639A4004DDE3E /* FirebaseFirestore.framework */,
+				10BDE2532476398D004DDE3E /* FirebaseAuth.framework */,
+				10BDE24F24763950004DDE3E /* FirebaseFirestore.framework */,
+				10BDE24C247638A1004DDE3E /* FirebaseCore.framework */,
+				10BDE2492476389B004DDE3E /* FirebaseAuth.framework */,
+				10BDE2462476388F004DDE3E /* FirebaseFirestore.framework */,
+				10BDE244247636B1004DDE3E /* SafariServices.framework */,
+				10BDE2362474FAFF004DDE3E /* GoogleUtilities.framework */,
+				10BDE2342474F9B5004DDE3E /* GoogleUtilities.framework */,
+				10BDE22E2474F4E2004DDE3E /* GoogleUtilities.framework */,
+				107F9DAF2474BF07007470F4 /* libz.tbd */,
+				107F9DAE2474BEFA007470F4 /* libsqlite3.tbd */,
+				107F9DAD2474BEEE007470F4 /* libc++.tbd */,
 				107F9D9B246A3226007470F4 /* libchilkatIos.a */,
 				10CB1BEF2449414E00821EB9 /* WebKit.framework */,
-				F1A044EDD2D081B0089DBA29 /* Pods_BiteThyme.framework */,
-				93EE63C4F16CF7CBEF8B8520 /* Pods_BiteThyme_BiteThymeUITests.framework */,
-				6CF8DA437D12F7F49E5593CF /* Pods_BiteThymeTests.framework */,
+				3191097BAB680B07D15E4B4B /* Pods_BiteThyme.framework */,
+				87BE37796232C3201F1557C6 /* Pods_BiteThyme_BiteThymeUITests.framework */,
+				7DEEB6D6602322A5DB92F355 /* Pods_BiteThymeTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -220,12 +327,12 @@
 		1AF2345B165CFFD0E7211BCD /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				66296385A3991E1492A6B2C3 /* Pods-BiteThyme.debug.xcconfig */,
-				65AA7F3892BDC93619C0C348 /* Pods-BiteThyme.release.xcconfig */,
-				913BD516A0FA07184636A532 /* Pods-BiteThyme-BiteThymeUITests.debug.xcconfig */,
-				87E9B45C4E32180008FEFAB3 /* Pods-BiteThyme-BiteThymeUITests.release.xcconfig */,
-				2C25FD2811F1F67E8B32C0D5 /* Pods-BiteThymeTests.debug.xcconfig */,
-				732245294045D1A841A36AC7 /* Pods-BiteThymeTests.release.xcconfig */,
+				C7DB2F64E57CF841413C6946 /* Pods-BiteThyme.debug.xcconfig */,
+				4C0D655B8FD293A2B988C8B1 /* Pods-BiteThyme.release.xcconfig */,
+				63494CCD455C106B0DDA5AE6 /* Pods-BiteThyme-BiteThymeUITests.debug.xcconfig */,
+				D56130CFD4E877C156D28E4D /* Pods-BiteThyme-BiteThymeUITests.release.xcconfig */,
+				535CD4C5621729A91A5C531E /* Pods-BiteThymeTests.debug.xcconfig */,
+				99D8CA269A632F982D813893 /* Pods-BiteThymeTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -237,11 +344,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 10CB1BE5244820FD00821EB9 /* Build configuration list for PBXNativeTarget "BiteThyme" */;
 			buildPhases = (
-				32103AA1D725DCF8A52F9B6C /* [CP] Check Pods Manifest.lock */,
+				63CCC6F32B52C2E74B1172F8 /* [CP] Check Pods Manifest.lock */,
 				10CB1BB7244820FB00821EB9 /* Sources */,
 				10CB1BB8244820FB00821EB9 /* Frameworks */,
 				10CB1BB9244820FB00821EB9 /* Resources */,
-				AF3B8C5C76C0CCCC1AB548F2 /* [CP] Embed Pods Frameworks */,
+				44B099BB46C13C427004D26B /* [CP] Embed Pods Frameworks */,
+				10BDE25D24763FFC004DDE3E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -256,7 +364,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 10CB1BE8244820FD00821EB9 /* Build configuration list for PBXNativeTarget "BiteThymeTests" */;
 			buildPhases = (
-				BD53833118B0A3B00CC22272 /* [CP] Check Pods Manifest.lock */,
+				0A3330B4C073628670AF25BC /* [CP] Check Pods Manifest.lock */,
 				10CB1BCD244820FD00821EB9 /* Sources */,
 				10CB1BCE244820FD00821EB9 /* Frameworks */,
 				10CB1BCF244820FD00821EB9 /* Resources */,
@@ -275,11 +383,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 10CB1BEB244820FD00821EB9 /* Build configuration list for PBXNativeTarget "BiteThymeUITests" */;
 			buildPhases = (
-				36B9AE1EA0BF0DE45B70216D /* [CP] Check Pods Manifest.lock */,
+				2968DAE17B3F4134A5909581 /* [CP] Check Pods Manifest.lock */,
 				10CB1BD8244820FD00821EB9 /* Sources */,
 				10CB1BD9244820FD00821EB9 /* Frameworks */,
 				10CB1BDA244820FD00821EB9 /* Resources */,
-				B773B0DFC2EAD04DFFC2BB4C /* [CP] Embed Pods Frameworks */,
+				AA5BD3B77424683EAE75E5C0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -342,6 +450,7 @@
 				10CB1BCB244820FD00821EB9 /* LaunchScreen.storyboard in Resources */,
 				10CB1BC8244820FD00821EB9 /* Assets.xcassets in Resources */,
 				10CB1BC6244820FB00821EB9 /* Main.storyboard in Resources */,
+				10BDE243247635F6004DDE3E /* GoogleService-Info.plist in Resources */,
 				107F9D7B2457C696007470F4 /* GroceryListsCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,85 +472,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		32103AA1D725DCF8A52F9B6C /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-BiteThyme-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		36B9AE1EA0BF0DE45B70216D /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-BiteThyme-BiteThymeUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AF3B8C5C76C0CCCC1AB548F2 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BiteThyme/Pods-BiteThyme-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BiteThyme/Pods-BiteThyme-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BiteThyme/Pods-BiteThyme-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B773B0DFC2EAD04DFFC2BB4C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BiteThyme-BiteThymeUITests/Pods-BiteThyme-BiteThymeUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BiteThyme-BiteThymeUITests/Pods-BiteThyme-BiteThymeUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BiteThyme-BiteThymeUITests/Pods-BiteThyme-BiteThymeUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BD53833118B0A3B00CC22272 /* [CP] Check Pods Manifest.lock */ = {
+		0A3330B4C073628670AF25BC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -463,6 +494,84 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		2968DAE17B3F4134A5909581 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BiteThyme-BiteThymeUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		44B099BB46C13C427004D26B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BiteThyme/Pods-BiteThyme-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BiteThyme/Pods-BiteThyme-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BiteThyme/Pods-BiteThyme-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		63CCC6F32B52C2E74B1172F8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BiteThyme-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AA5BD3B77424683EAE75E5C0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BiteThyme-BiteThymeUITests/Pods-BiteThyme-BiteThymeUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BiteThyme-BiteThymeUITests/Pods-BiteThyme-BiteThymeUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BiteThyme-BiteThymeUITests/Pods-BiteThyme-BiteThymeUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -471,16 +580,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				107F9D95245AA445007470F4 /* ListTableViewCell.swift in Sources */,
+				10BDE24124762B7C004DDE3E /* Constants.swift in Sources */,
 				107F9D7A2457C696007470F4 /* GroceryListsCell.swift in Sources */,
+				107F9DAA24748E1C007470F4 /* Initial.swift in Sources */,
 				107F9D6C245110F6007470F4 /* Kroger.swift in Sources */,
+				107F9DA7247485D9007470F4 /* Utilities.swift in Sources */,
 				107F9D6E2455425C007470F4 /* Sams.swift in Sources */,
 				107F9D7D2457E761007470F4 /* List.swift in Sources */,
 				107F9D6A244FF8A2007470F4 /* Walmart.swift in Sources */,
 				107F9D97245BDB06007470F4 /* ListCollectionViewCell.swift in Sources */,
+				107F9DA524745691007470F4 /* Login.swift in Sources */,
 				10CB1BC3244820FB00821EB9 /* ViewController.swift in Sources */,
 				10CB1BBF244820FB00821EB9 /* AppDelegate.swift in Sources */,
 				107F9D70245558DE007470F4 /* Walgreens.swift in Sources */,
 				10CB1BC1244820FB00821EB9 /* SceneDelegate.swift in Sources */,
+				107F9DA22474564F007470F4 /* SignUp.swift in Sources */,
 				107F9D72245694F3007470F4 /* GroceryLists.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -539,6 +653,7 @@
 		10CB1BE3244820FD00821EB9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -596,12 +711,14 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OBJC_BRIDGING_HEADER = "BiteThyme/BiteThyme-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_REFLECTION_METADATA_LEVEL = none;
 			};
 			name = Debug;
 		};
 		10CB1BE4244820FD00821EB9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -652,29 +769,29 @@
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OBJC_BRIDGING_HEADER = "BiteThyme/BiteThyme-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_REFLECTION_METADATA_LEVEL = none;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		10CB1BE6244820FD00821EB9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 66296385A3991E1492A6B2C3 /* Pods-BiteThyme.debug.xcconfig */;
+			baseConfigurationReference = C7DB2F64E57CF841413C6946 /* Pods-BiteThyme.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4PJ6MQ7ZD5;
 				INFOPLIST_FILE = BiteThyme/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/chilkat-9.5-2.0-ios/lib/arm64",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				"OTHER_LDFLAGS[arch=*]" = "";
-				PRODUCT_BUNDLE_IDENTIFIER = Maddie.BiteThyme;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Lowceries;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "BiteThyme/List/Stores/Walmart-BridgingHeader.h";
+				SWIFT_REFLECTION_METADATA_LEVEL = none;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "Pods/**";
@@ -683,23 +800,22 @@
 		};
 		10CB1BE7244820FD00821EB9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 65AA7F3892BDC93619C0C348 /* Pods-BiteThyme.release.xcconfig */;
+			baseConfigurationReference = 4C0D655B8FD293A2B988C8B1 /* Pods-BiteThyme.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4PJ6MQ7ZD5;
 				INFOPLIST_FILE = BiteThyme/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/chilkat-9.5-2.0-ios/lib/arm64",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				"OTHER_LDFLAGS[arch=*]" = "";
-				PRODUCT_BUNDLE_IDENTIFIER = Maddie.BiteThyme;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Lowceries;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "BiteThyme/List/Stores/Walmart-BridgingHeader.h";
+				SWIFT_REFLECTION_METADATA_LEVEL = none;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "Pods/**";
@@ -708,7 +824,7 @@
 		};
 		10CB1BE9244820FD00821EB9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2C25FD2811F1F67E8B32C0D5 /* Pods-BiteThymeTests.debug.xcconfig */;
+			baseConfigurationReference = 535CD4C5621729A91A5C531E /* Pods-BiteThymeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -730,7 +846,7 @@
 		};
 		10CB1BEA244820FD00821EB9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 732245294045D1A841A36AC7 /* Pods-BiteThymeTests.release.xcconfig */;
+			baseConfigurationReference = 99D8CA269A632F982D813893 /* Pods-BiteThymeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -752,7 +868,7 @@
 		};
 		10CB1BEC244820FD00821EB9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 913BD516A0FA07184636A532 /* Pods-BiteThyme-BiteThymeUITests.debug.xcconfig */;
+			baseConfigurationReference = 63494CCD455C106B0DDA5AE6 /* Pods-BiteThyme-BiteThymeUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -772,7 +888,7 @@
 		};
 		10CB1BED244820FD00821EB9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 87E9B45C4E32180008FEFAB3 /* Pods-BiteThyme-BiteThymeUITests.release.xcconfig */;
+			baseConfigurationReference = D56130CFD4E877C156D28E4D /* Pods-BiteThyme-BiteThymeUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

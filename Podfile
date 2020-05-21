@@ -6,6 +6,10 @@ target 'BiteThyme' do
   # Pods for BiteThyme
   pod 'WalmartSDKKit'
   #pod 'WalmartOpenApi'
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Core'
+  pod 'Firebase/Firestore' 
 
   target 'BiteThymeTests' do
     inherit! :search_paths
