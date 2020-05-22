@@ -9,6 +9,7 @@
 import UIKit
 import FirebaseAuth
 import Firebase
+import FirebaseFirestore
 
 class SignUp: UIViewController {
 
@@ -71,12 +72,12 @@ class SignUp: UIViewController {
                     self.showErrorMessage(message: "Error creating user")
                 }else{
                     //user was created successfully, now store the first name and last name
+                    print("SAving user info ")
                     let db = Firestore.firestore()
-                    db.collection("users").addDocument(data: [
-                        "firstname": firstNameCleaned,
+                    db.collection("Users").addDocument(data:
+                        ["firstname": firstNameCleaned,
                         "lastname": lastNameCleaned,
-                        "uid": result!.user.uid
-                    ]) { (error) in
+                        "uid": result!.user.uid]) { (error) in
                         if error != nil{
                             print("User data could not be saved in the database.")
                         }

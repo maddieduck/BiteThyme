@@ -372,7 +372,7 @@
 		108E568B5AE29742A73DD323FD06CDDF /* roots.pem in Resources */ = {isa = PBXBuildFile; fileRef = 9BFF91033C8A6B8E86D19F729CD15975 /* roots.pem */; };
 		10B29933C3F686F691C9B68031500470 /* escaping.h in Headers */ = {isa = PBXBuildFile; fileRef = C19C7AF5C380961B315328718A7DCDC9 /* escaping.h */; };
 		10BC12A498BC038DE80EF67D4813BD38 /* time_zone_info.cc in Sources */ = {isa = PBXBuildFile; fileRef = C69A42923E1384E50591EA10B9F40053 /* time_zone_info.cc */; settings = {COMPILER_FLAGS = "-Wno-everything"; }; };
-		10BDE27224764F61004DDE3E /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10BDE27124764F61004DDE3E /* CoreServices.framework */; };
+		10BDE28324777A38004DDE3E /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10BDE28224777A37004DDE3E /* CoreServices.framework */; };
 		10BE45CAC5445EECC2731159667FD1B3 /* thd.h in Copy src/core/lib/gprpp Private Headers */ = {isa = PBXBuildFile; fileRef = 798D088C4308CFA41D814C3B394DCB85 /* thd.h */; };
 		10BE73CAF23ADE9DC5268A8CDF5B5E16 /* buf.c in Sources */ = {isa = PBXBuildFile; fileRef = 9BA96D76FEEEC600023A8E7556FEC369 /* buf.c */; settings = {COMPILER_FLAGS = "-DOPENSSL_NO_ASM -GCC_WARN_INHIBIT_ALL_WARNINGS -w -fno-objc-arc"; }; };
 		10DE22F06982F97850BB417E2EDD4521 /* refcount_lock.c in Sources */ = {isa = PBXBuildFile; fileRef = 60AE57154E6961669E5D3E9AD91F907A /* refcount_lock.c */; settings = {COMPILER_FLAGS = "-DOPENSSL_NO_ASM -GCC_WARN_INHIBIT_ALL_WARNINGS -w -fno-objc-arc"; }; };
@@ -9030,7 +9030,7 @@
 		108FF8FD1B218DAF7FB2A5FFDEBD312B /* FirebaseAuth-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FirebaseAuth-dummy.m"; sourceTree = "<group>"; };
 		10982B983434BD9AE6BCEB0EBF2B567C /* socket_windows.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = socket_windows.h; path = src/core/lib/iomgr/socket_windows.h; sourceTree = "<group>"; };
 		10ABACEF84F2A3656C5D4F64EFDC0C69 /* port_def.inc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.pascal; name = port_def.inc; path = third_party/upb/upb/port_def.inc; sourceTree = "<group>"; };
-		10BDE27124764F61004DDE3E /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
+		10BDE28224777A37004DDE3E /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
 		10C97B1A82031A5D18092095B1756BF8 /* duration.upb.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = duration.upb.c; path = "src/core/ext/upb-generated/google/protobuf/duration.upb.c"; sourceTree = "<group>"; };
 		10CC186E8CD52BF47F422EA66654E32B /* grpc_stream.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = grpc_stream.cc; path = Firestore/core/src/remote/grpc_stream.cc; sourceTree = "<group>"; };
 		10D444823E56F4640DF2C10E30FB8F22 /* statusor.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = statusor.cc; path = Firestore/core/src/util/statusor.cc; sourceTree = "<group>"; };
@@ -12088,7 +12088,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				45AD6149EEB2883EAC09063B5FDD6F5B /* CoreGraphics.framework in Frameworks */,
-				10BDE27224764F61004DDE3E /* CoreServices.framework in Frameworks */,
+				10BDE28324777A38004DDE3E /* CoreServices.framework in Frameworks */,
 				0254EABA2D0AACFBFA5E2BAD753C5E2D /* Foundation.framework in Frameworks */,
 				1AC36159DEDD4452C304D5B1FFB688D1 /* MobileCoreServices.framework in Frameworks */,
 				A93BD560DD062BA5B515267570761CBE /* Security.framework in Frameworks */,
@@ -14962,7 +14962,7 @@
 		88700671D72C54FC04F3A38B1B037D3D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				10BDE27124764F61004DDE3E /* CoreServices.framework */,
+				10BDE28224777A37004DDE3E /* CoreServices.framework */,
 				9D01BAE58559B7ADC94AAC886FCF0A33 /* absl.framework */,
 				0207EFD1C8D1FF2837DAA208C151C9B5 /* FBLPromises.framework */,
 				D9FB0261F41D3605B3A84FFD7583CF0B /* grpc.framework */,

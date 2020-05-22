@@ -14,6 +14,4 @@ class ListCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var itemPicture: UIImageView!
     @IBOutlet weak var addItem: UIButton!
     
-    
-    
 }
