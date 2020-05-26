@@ -6,6 +6,9 @@
 //  Copyright © 2020 Maddie Drake. All rights reserved.
 //
 
+//Displays the ingredients and stores
+//The title and the "Add Item" rows have sections with 0 height (nonexistent heights)
+
 import UIKit
 import WalmartSDKKit
 import WalmartOpenApi
@@ -17,7 +20,7 @@ let KrogerCallbackNotifier = "KrogerCallbackNotifier"
 
 class List: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    let ArrayOfItems = ["milk", "eggs", "cheese", "yogurt", "posicles", "candy", "cucumber", "nuts"]
+    let ArrayOfItems = ["milk", "eggs", "cheese", "bacon"]
     var listTitle: String = ""
     
     @IBOutlet weak var ListTableView: UITableView!
@@ -87,10 +90,7 @@ class List: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //ArrayOfItems.count
-        if section == 0{
-            return 1
-        }else if section == ArrayOfItems.count{
-            //the last cell doesn't need padding
+        if section == 0 || section == (ArrayOfItems.count + 1){
             return 1
         }else{
             //each ingredient needs padding and store data
@@ -103,18 +103,25 @@ class List: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return ArrayOfItems.count
+        //items + title + addItem at the bottom
+        return ArrayOfItems.count + 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0{
+            //Title
             let titleCell = ListTableView.dequeueReusableCell(withIdentifier: "ListNameTVCell", for: indexPath) as! ListTitleTVCell
             titleCell.title.text = listTitle
             return titleCell
+        }else if indexPath.section == (ArrayOfItems.count + 1){
+            //Add Item (Last Cell)
+            return ListTableView.dequeueReusableCell(withIdentifier: "AddTVItem", for: indexPath) as! AddIngreient
         }else if indexPath.row == 0{
+            //store information
             let ingredientCell = ListTableView.dequeueReusableCell(withIdentifier: "ListTableViewCellID", for: indexPath) as! ListTableViewCell
             return ingredientCell
         }else{
+            //Padding
             return ListTableView.dequeueReusableCell(withIdentifier: "PaddingTVCellID", for: indexPath) as! Padding
         }
     }
@@ -123,6 +130,9 @@ class List: UIViewController, UITableViewDelegate, UITableViewDataSource {
         if indexPath.section == 0{
             //Title
             return 52
+        }else if indexPath.section == (ArrayOfItems.count + 1){
+            //Add Item Row
+            return 36
         }else if indexPath.row == 0{
             //Ingredient Cell
             return 135
@@ -137,8 +147,8 @@ class List: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        if section == 0{
-            //title section is nonexistent
+        if section == 0 || section == (ArrayOfItems.count + 1){
+            //title section is nonexistent and so is the "Add Item" section
             return 0
         }else{
             //Ingredient name section
@@ -147,7 +157,7 @@ class List: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        if section == 0{
+        if section == 0 || section == (ArrayOfItems.count + 1){
             //for the first section that is unseen
             return ListTableView.dequeueReusableCell(withIdentifier: "ingredientHeader") as! ingredientHeader
         }else{

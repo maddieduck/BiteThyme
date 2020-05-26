@@ -416,7 +416,7 @@
                                             <outlet property="ListCollectionView" destination="0F3-QZ-AJR" id="Qum-PN-hOj"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AddTVItem" rowHeight="36" id="pLz-6X-61L" customClass="ListTableViewCell" customModule="BiteThyme" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AddTVItem" rowHeight="36" id="pLz-6X-61L" customClass="AddIngreient" customModule="BiteThyme" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="278.5" width="414" height="36"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pLz-6X-61L" id="wEt-sH-Qm9">
@@ -450,6 +450,10 @@
                                                 <constraint firstItem="6LO-Tj-uZZ" firstAttribute="leading" secondItem="wEt-sH-Qm9" secondAttribute="leading" constant="20" id="rSv-As-fp8"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="addIngredientButton" destination="1n0-sq-oHQ" id="vsh-xp-yqd"/>
+                                            <outlet property="addIngredientText" destination="6LO-Tj-uZZ" id="NQ4-XC-zKV"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PaddingTVCellID" rowHeight="20" id="1Ac-Wx-JXd" customClass="Padding" customModule="BiteThyme" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="314.5" width="414" height="20"/>

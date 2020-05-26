@@ -36,6 +36,7 @@
 		10BDE28A247B8A12004DDE3E /* ListTitleTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BDE289247B8A12004DDE3E /* ListTitleTVCell.swift */; };
 		10BDE291247BABE5004DDE3E /* ingredientHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BDE28F247BABE5004DDE3E /* ingredientHeader.swift */; };
 		10BDE293247CD270004DDE3E /* Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BDE292247CD270004DDE3E /* Padding.swift */; };
+		10BDE295247CD3D8004DDE3E /* AddIngreient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BDE294247CD3D8004DDE3E /* AddIngreient.swift */; };
 		10CB1BBF244820FB00821EB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CB1BBE244820FB00821EB9 /* AppDelegate.swift */; };
 		10CB1BC1244820FB00821EB9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CB1BC0244820FB00821EB9 /* SceneDelegate.swift */; };
 		10CB1BC3244820FB00821EB9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CB1BC2244820FB00821EB9 /* ViewController.swift */; };
@@ -129,6 +130,7 @@
 		10BDE289247B8A12004DDE3E /* ListTitleTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTitleTVCell.swift; sourceTree = "<group>"; };
 		10BDE28F247BABE5004DDE3E /* ingredientHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ingredientHeader.swift; sourceTree = "<group>"; };
 		10BDE292247CD270004DDE3E /* Padding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Padding.swift; sourceTree = "<group>"; };
+		10BDE294247CD3D8004DDE3E /* AddIngreient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIngreient.swift; sourceTree = "<group>"; };
 		10CB1BBB244820FB00821EB9 /* BiteThyme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BiteThyme.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10CB1BBE244820FB00821EB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10CB1BC0244820FB00821EB9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 				107F9D6B245110F6007470F4 /* Kroger.swift */,
 				107F9D6D2455425C007470F4 /* Sams.swift */,
 				10BDE28F247BABE5004DDE3E /* ingredientHeader.swift */,
+				10BDE294247CD3D8004DDE3E /* AddIngreient.swift */,
 				107F9D94245AA445007470F4 /* ListTableViewCell.swift */,
 				107F9D96245BDB06007470F4 /* ListCollectionViewCell.swift */,
 				107F9D69244FF8A2007470F4 /* Walmart.swift */,
@@ -606,6 +609,7 @@
 				10BDE24124762B7C004DDE3E /* Constants.swift in Sources */,
 				107F9D7A2457C696007470F4 /* GroceryListsCell.swift in Sources */,
 				107F9DAA24748E1C007470F4 /* Initial.swift in Sources */,
+				10BDE295247CD3D8004DDE3E /* AddIngreient.swift in Sources */,
 				107F9D6C245110F6007470F4 /* Kroger.swift in Sources */,
 				107F9DA7247485D9007470F4 /* Utilities.swift in Sources */,
 				107F9D6E2455425C007470F4 /* Sams.swift in Sources */,
