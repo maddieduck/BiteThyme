@@ -65,6 +65,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, continue userActivity: NSUserActivity) {
         print("Continue user activity")
     }
+    
+    fileprivate func setupAppearance(){
+        
+    }
 
 }
 

@@ -532,7 +532,6 @@
 		1A722A87ED7A0AC2F9F5D44DDF739803 /* server_callback_impl.h in Headers */ = {isa = PBXBuildFile; fileRef = F5D9F04EBC4325561A634BC2FFA028AC /* server_callback_impl.h */; };
 		1A8C4435608C92FF9AC3C119518B79D5 /* pretty_function.h in Headers */ = {isa = PBXBuildFile; fileRef = AC1728523B074307CC128B878F616012 /* pretty_function.h */; };
 		1AADEFCF2EF3096CD2823C05A6206F95 /* ssl_security_connector.h in Headers */ = {isa = PBXBuildFile; fileRef = C94467EAA8FDC77676785A495AE3E54E /* ssl_security_connector.h */; };
-		1AC36159DEDD4452C304D5B1FFB688D1 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88B44575AA437110611A1BAA3C005C87 /* MobileCoreServices.framework */; };
 		1AF710D4DD252A41C3BAD85849240725 /* srds.upb.h in Copy src/core/ext/upb-generated/envoy/api/v2 Private Headers */ = {isa = PBXBuildFile; fileRef = D99C1202570E5F8DF03127598DB84604 /* srds.upb.h */; };
 		1B0BC51D5C0239FA5B08066DF1160377 /* socket_factory_posix.h in Copy src/core/lib/iomgr Private Headers */ = {isa = PBXBuildFile; fileRef = CD2BC9ABB268F6C7852A6D95FAE00976 /* socket_factory_posix.h */; };
 		1B0EC7C9A389B81DCE1743A8D56B917C /* firestore.cc in Sources */ = {isa = PBXBuildFile; fileRef = 480E12AF5D0C96248C447A57C42121E0 /* firestore.cc */; settings = {COMPILER_FLAGS = "$(inherited) -Wreorder -Werror=reorder -Wno-comma -fno-objc-arc"; }; };
@@ -12090,7 +12089,6 @@
 				45AD6149EEB2883EAC09063B5FDD6F5B /* CoreGraphics.framework in Frameworks */,
 				10BDE28324777A38004DDE3E /* CoreServices.framework in Frameworks */,
 				0254EABA2D0AACFBFA5E2BAD753C5E2D /* Foundation.framework in Frameworks */,
-				1AC36159DEDD4452C304D5B1FFB688D1 /* MobileCoreServices.framework in Frameworks */,
 				A93BD560DD062BA5B515267570761CBE /* Security.framework in Frameworks */,
 				B26EDD2D9A9BC8CDDEADEA8DBEC606A7 /* SystemConfiguration.framework in Frameworks */,
 			);

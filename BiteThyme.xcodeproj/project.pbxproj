@@ -26,14 +26,16 @@
 		107F9DB22474BF36007470F4 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 107F9DAD2474BEEE007470F4 /* libc++.tbd */; };
 		10BDE2372474FAFF004DDE3E /* GoogleUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10BDE2362474FAFF004DDE3E /* GoogleUtilities.framework */; };
 		10BDE24124762B7C004DDE3E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BDE24024762B7C004DDE3E /* Constants.swift */; };
-		10BDE243247635F6004DDE3E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 10BDE242247635F6004DDE3E /* GoogleService-Info.plist */; };
 		10BDE245247636B1004DDE3E /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10BDE244247636B1004DDE3E /* SafariServices.framework */; };
-		10BDE26A24764E31004DDE3E /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 107F9DAD2474BEEE007470F4 /* libc++.tbd */; };
 		10BDE2752477548A004DDE3E /* absl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10BDE2742477548A004DDE3E /* absl.framework */; };
 		10BDE279247755BB004DDE3E /* nanopb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10BDE278247755BB004DDE3E /* nanopb.framework */; };
 		10BDE27F247755F8004DDE3E /* grpcpp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10BDE27E247755F8004DDE3E /* grpcpp.framework */; };
 		10BDE2812477560F004DDE3E /* leveldb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10BDE2802477560F004DDE3E /* leveldb.framework */; };
 		10BDE28424777A44004DDE3E /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10BDE26B24764E7F004DDE3E /* CoreServices.framework */; };
+		10BDE28624778F8D004DDE3E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 10BDE28524778F8D004DDE3E /* GoogleService-Info.plist */; };
+		10BDE28A247B8A12004DDE3E /* ListTitleTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BDE289247B8A12004DDE3E /* ListTitleTVCell.swift */; };
+		10BDE291247BABE5004DDE3E /* ingredientHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BDE28F247BABE5004DDE3E /* ingredientHeader.swift */; };
+		10BDE293247CD270004DDE3E /* Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BDE292247CD270004DDE3E /* Padding.swift */; };
 		10CB1BBF244820FB00821EB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CB1BBE244820FB00821EB9 /* AppDelegate.swift */; };
 		10CB1BC1244820FB00821EB9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CB1BC0244820FB00821EB9 /* SceneDelegate.swift */; };
 		10CB1BC3244820FB00821EB9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CB1BC2244820FB00821EB9 /* ViewController.swift */; };
@@ -102,7 +104,6 @@
 		10BDE2342474F9B5004DDE3E /* GoogleUtilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GoogleUtilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		10BDE2362474FAFF004DDE3E /* GoogleUtilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GoogleUtilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		10BDE24024762B7C004DDE3E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		10BDE242247635F6004DDE3E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		10BDE244247636B1004DDE3E /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		10BDE2462476388F004DDE3E /* FirebaseFirestore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseFirestore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		10BDE2492476389B004DDE3E /* FirebaseAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,6 +125,10 @@
 		10BDE27C247755E8004DDE3E /* openssl_grpc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = openssl_grpc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		10BDE27E247755F8004DDE3E /* grpcpp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = grpcpp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		10BDE2802477560F004DDE3E /* leveldb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = leveldb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		10BDE28524778F8D004DDE3E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		10BDE289247B8A12004DDE3E /* ListTitleTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTitleTVCell.swift; sourceTree = "<group>"; };
+		10BDE28F247BABE5004DDE3E /* ingredientHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ingredientHeader.swift; sourceTree = "<group>"; };
+		10BDE292247CD270004DDE3E /* Padding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Padding.swift; sourceTree = "<group>"; };
 		10CB1BBB244820FB00821EB9 /* BiteThyme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BiteThyme.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10CB1BBE244820FB00821EB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10CB1BC0244820FB00821EB9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -165,7 +170,6 @@
 				10BDE245247636B1004DDE3E /* SafariServices.framework in Frameworks */,
 				107F9DB22474BF36007470F4 /* libc++.tbd in Frameworks */,
 				107F9DB12474BF28007470F4 /* libz.tbd in Frameworks */,
-				10BDE26A24764E31004DDE3E /* libc++.tbd in Frameworks */,
 				10CB1BF02449414E00821EB9 /* WebKit.framework in Frameworks */,
 				F54E0496856218C136881CC6 /* Pods_BiteThyme.framework in Frameworks */,
 			);
@@ -203,12 +207,17 @@
 		107F9D7E2457EB85007470F4 /* List */ = {
 			isa = PBXGroup;
 			children = (
+				107F9D7C2457E761007470F4 /* List.swift */,
 				107F9D99245BE80C007470F4 /* Stores */,
+				10BDE289247B8A12004DDE3E /* ListTitleTVCell.swift */,
+				107F9D6B245110F6007470F4 /* Kroger.swift */,
 				107F9D6D2455425C007470F4 /* Sams.swift */,
-				107F9D69244FF8A2007470F4 /* Walmart.swift */,
-				107F9D6F245558DE007470F4 /* Walgreens.swift */,
+				10BDE28F247BABE5004DDE3E /* ingredientHeader.swift */,
 				107F9D94245AA445007470F4 /* ListTableViewCell.swift */,
 				107F9D96245BDB06007470F4 /* ListCollectionViewCell.swift */,
+				107F9D69244FF8A2007470F4 /* Walmart.swift */,
+				107F9D6F245558DE007470F4 /* Walgreens.swift */,
+				10BDE292247CD270004DDE3E /* Padding.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -216,8 +225,6 @@
 		107F9D99245BE80C007470F4 /* Stores */ = {
 			isa = PBXGroup;
 			children = (
-				107F9D7C2457E761007470F4 /* List.swift */,
-				107F9D6B245110F6007470F4 /* Kroger.swift */,
 				107F9D9E2470D46F007470F4 /* Walmart-BridgingHeader.h */,
 			);
 			path = Stores;
@@ -267,17 +274,17 @@
 		10CB1BBD244820FB00821EB9 /* BiteThyme */ = {
 			isa = PBXGroup;
 			children = (
+				10CB1BBE244820FB00821EB9 /* AppDelegate.swift */,
+				10CB1BC0244820FB00821EB9 /* SceneDelegate.swift */,
 				107F9DA8247489FC007470F4 /* Helpers */,
 				107F9DA32474565C007470F4 /* Login */,
 				107F9D772456A52B007470F4 /* Grocery Lists */,
 				107F9D7E2457EB85007470F4 /* List */,
-				10CB1BBE244820FB00821EB9 /* AppDelegate.swift */,
-				10CB1BC0244820FB00821EB9 /* SceneDelegate.swift */,
 				10CB1BC2244820FB00821EB9 /* ViewController.swift */,
 				10CB1BC4244820FB00821EB9 /* Main.storyboard */,
 				10CB1BC7244820FD00821EB9 /* Assets.xcassets */,
 				10CB1BC9244820FD00821EB9 /* LaunchScreen.storyboard */,
-				10BDE242247635F6004DDE3E /* GoogleService-Info.plist */,
+				10BDE28524778F8D004DDE3E /* GoogleService-Info.plist */,
 				10CB1BCC244820FD00821EB9 /* Info.plist */,
 			);
 			path = BiteThyme;
@@ -465,8 +472,8 @@
 			files = (
 				10CB1BCB244820FD00821EB9 /* LaunchScreen.storyboard in Resources */,
 				10CB1BC8244820FD00821EB9 /* Assets.xcassets in Resources */,
+				10BDE28624778F8D004DDE3E /* GoogleService-Info.plist in Resources */,
 				10CB1BC6244820FB00821EB9 /* Main.storyboard in Resources */,
-				10BDE243247635F6004DDE3E /* GoogleService-Info.plist in Resources */,
 				107F9D7B2457C696007470F4 /* GroceryListsCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -605,6 +612,8 @@
 				107F9D7D2457E761007470F4 /* List.swift in Sources */,
 				107F9D6A244FF8A2007470F4 /* Walmart.swift in Sources */,
 				107F9D97245BDB06007470F4 /* ListCollectionViewCell.swift in Sources */,
+				10BDE28A247B8A12004DDE3E /* ListTitleTVCell.swift in Sources */,
+				10BDE293247CD270004DDE3E /* Padding.swift in Sources */,
 				107F9DA524745691007470F4 /* Login.swift in Sources */,
 				10CB1BC3244820FB00821EB9 /* ViewController.swift in Sources */,
 				10CB1BBF244820FB00821EB9 /* AppDelegate.swift in Sources */,
@@ -612,6 +621,7 @@
 				10CB1BC1244820FB00821EB9 /* SceneDelegate.swift in Sources */,
 				107F9DA22474564F007470F4 /* SignUp.swift in Sources */,
 				107F9D72245694F3007470F4 /* GroceryLists.swift in Sources */,
+				10BDE291247BABE5004DDE3E /* ingredientHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
