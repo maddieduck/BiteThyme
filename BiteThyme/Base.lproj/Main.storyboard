@@ -84,7 +84,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Kk-FR-Kzk">
                                         <rect key="frame" x="0.0" y="140" width="334" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u3n-fI-Hwx">
                                         <rect key="frame" x="0.0" y="210" width="334" height="50"/>
@@ -288,18 +288,31 @@
                                                 </connections>
                                             </button>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" style="plain" id="ig4-qQ-hbe">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="D53-sA-dcc" userLabel="Settings">
-                                                <rect key="frame" x="369" y="9.5" width="25" height="25"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <state key="normal" image="Settings"/>
-                                            </button>
-                                        </barButtonItem>
+                                        <rightBarButtonItems>
+                                            <barButtonItem style="plain" id="ig4-qQ-hbe">
+                                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="D53-sA-dcc" userLabel="Settings">
+                                                    <rect key="frame" x="369" y="9.5" width="25" height="25"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <state key="normal" image="Settings"/>
+                                                </button>
+                                            </barButtonItem>
+                                            <barButtonItem title="prices" style="plain" id="GKP-nS-Ivl">
+                                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="q00-8S-7YE">
+                                                    <rect key="frame" x="336" y="9.5" width="25" height="25"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <state key="normal" image="ShoppingCart"/>
+                                                    <connections>
+                                                        <action selector="shoppingCartPressed:" destination="jQV-R1-cqG" eventType="touchUpInside" id="pQw-f8-EMJ"/>
+                                                    </connections>
+                                                </button>
+                                            </barButtonItem>
+                                        </rightBarButtonItems>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="JK5-wW-7pZ">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="JK5-wW-7pZ">
                                 <rect key="frame" x="0.0" y="87" width="414" height="745"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
@@ -348,7 +361,9 @@
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
+                                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </tableViewCellContentView>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="checkbox" destination="4QE-lr-WOe" id="SDp-8T-rf4"/>
                                             <outlet property="ingredient" destination="86o-2N-zRk" id="V8Q-Yx-XhD"/>
@@ -423,39 +438,39 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="36"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Item" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6LO-Tj-uZZ">
-                                                    <rect key="frame" x="20" y="8" width="327" height="20"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="20" id="mQa-0A-TSa"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1n0-sq-oHQ">
-                                                    <rect key="frame" x="367" y="0.5" width="35" height="35"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="35" id="1Je-D7-gyq"/>
-                                                        <constraint firstAttribute="height" constant="35" id="jlb-R6-2QH"/>
-                                                    </constraints>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add" translatesAutoresizingMaskIntoConstraints="NO" id="9dc-Hh-SuV">
+                                                    <rect key="frame" x="10" y="3" width="30" height="30"/>
                                                     <color key="tintColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <state key="normal" image="add"/>
-                                                </button>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="30" id="Kc9-kA-sAE"/>
+                                                        <constraint firstAttribute="height" constant="30" id="dxb-Op-cBc"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Add Item" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q7P-Fw-2VS">
+                                                    <rect key="frame" x="49" y="0.0" width="365" height="36"/>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="jQV-R1-cqG" id="xIe-ct-Snp"/>
+                                                    </connections>
+                                                </textField>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="1n0-sq-oHQ" firstAttribute="leading" secondItem="6LO-Tj-uZZ" secondAttribute="trailing" constant="20" id="5yr-9D-Ez0"/>
-                                                <constraint firstItem="1n0-sq-oHQ" firstAttribute="centerY" secondItem="wEt-sH-Qm9" secondAttribute="centerY" id="8oR-R4-8kM"/>
-                                                <constraint firstItem="6LO-Tj-uZZ" firstAttribute="centerY" secondItem="wEt-sH-Qm9" secondAttribute="centerY" id="U7V-7e-hH1"/>
-                                                <constraint firstAttribute="trailing" secondItem="1n0-sq-oHQ" secondAttribute="trailing" constant="12" id="nbG-tj-1nX"/>
-                                                <constraint firstItem="6LO-Tj-uZZ" firstAttribute="leading" secondItem="wEt-sH-Qm9" secondAttribute="leading" constant="20" id="rSv-As-fp8"/>
+                                                <constraint firstAttribute="trailing" secondItem="Q7P-Fw-2VS" secondAttribute="trailing" id="RGF-ad-nK0"/>
+                                                <constraint firstAttribute="bottom" secondItem="Q7P-Fw-2VS" secondAttribute="bottom" id="U7c-2y-TpT"/>
+                                                <constraint firstItem="Q7P-Fw-2VS" firstAttribute="leading" secondItem="9dc-Hh-SuV" secondAttribute="trailing" constant="9" id="Ube-RT-FiJ"/>
+                                                <constraint firstItem="9dc-Hh-SuV" firstAttribute="centerY" secondItem="wEt-sH-Qm9" secondAttribute="centerY" id="g0I-A4-mPD"/>
+                                                <constraint firstItem="9dc-Hh-SuV" firstAttribute="leading" secondItem="wEt-sH-Qm9" secondAttribute="leading" constant="10" id="hV7-EQ-6k8"/>
+                                                <constraint firstItem="9dc-Hh-SuV" firstAttribute="leading" secondItem="wEt-sH-Qm9" secondAttribute="leading" constant="10" id="q2G-tG-DlL"/>
+                                                <constraint firstItem="Q7P-Fw-2VS" firstAttribute="top" secondItem="wEt-sH-Qm9" secondAttribute="top" id="vZN-KG-RDn"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="addIngredientButton" destination="1n0-sq-oHQ" id="vsh-xp-yqd"/>
-                                            <outlet property="addIngredientText" destination="6LO-Tj-uZZ" id="NQ4-XC-zKV"/>
+                                            <outlet property="addItemTextField" destination="Q7P-Fw-2VS" id="5hp-kZ-nGc"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PaddingTVCellID" rowHeight="20" id="1Ac-Wx-JXd" customClass="Padding" customModule="BiteThyme" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PaddingTVCellID" rowHeight="20" id="1Ac-Wx-JXd" customClass="Padding" customModule="BiteThyme" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="314.5" width="414" height="20"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1Ac-Wx-JXd" id="ZyK-e7-nbB">
@@ -588,6 +603,7 @@
     <resources>
         <image name="Back" width="25" height="25"/>
         <image name="Settings" width="25" height="25"/>
+        <image name="ShoppingCart" width="25" height="25"/>
         <image name="add" width="256" height="256"/>
         <image name="heart" catalog="system" width="128" height="109"/>
         <image name="openCircle" width="256" height="256"/>

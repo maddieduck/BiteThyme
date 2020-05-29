@@ -10,8 +10,8 @@ import UIKit
 
 class AddIngreient: UITableViewCell {
 
-    @IBOutlet weak var addIngredientText: UILabel!
-    @IBOutlet weak var addIngredientButton: UIButton!
+    @IBOutlet weak var addItemTextField: UITextField!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -18,9 +18,9 @@ import SafariServices
 let krogerCallback = Notification.Name(rawValue: KrogerCallbackNotifier)
 let KrogerCallbackNotifier = "KrogerCallbackNotifier"
 
-class List: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class List: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextViewDelegate{
     
-    let ArrayOfItems = ["milk", "eggs", "cheese", "bacon"]
+    var ArrayOfItems = ["milk", "eggs", "cheese", "bacon"]
     var listTitle: String = ""
     
     @IBOutlet weak var ListTableView: UITableView!
@@ -28,6 +28,8 @@ class List: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var checkoutButton: UIButton!
     @IBOutlet weak var navbar: UINavigationBar!
     @IBOutlet weak var groceryListTitleText: UINavigationItem!
+    
+    var sectionsExpanded: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,6 +54,7 @@ class List: UIViewController, UITableViewDelegate, UITableViewDataSource {
         // Sets Bar's Shadow Image (Color) //
         navbar.shadowImage = UIImage.imageWithColor(color: .red)
         navbar.setValue(true, forKey: "hidesShadow")
+        
         
         //searchProduct(query: "Cheese")
         
@@ -115,6 +118,8 @@ class List: UIViewController, UITableViewDelegate, UITableViewDataSource {
             return titleCell
         }else if indexPath.section == (ArrayOfItems.count + 1){
             //Add Item (Last Cell)
+            //let addCell = ListTableView.dequeueReusableCell(withIdentifier: "AddTVItem", for: indexPath) as! AddIngreient
+            //addToolBar(textField: addCell.addItemTextField)
             return ListTableView.dequeueReusableCell(withIdentifier: "AddTVItem", for: indexPath) as! AddIngreient
         }else if indexPath.row == 0{
             //store information
@@ -133,13 +138,20 @@ class List: UIViewController, UITableViewDelegate, UITableViewDataSource {
         }else if indexPath.section == (ArrayOfItems.count + 1){
             //Add Item Row
             return 36
-        }else if indexPath.row == 0{
-            //Ingredient Cell
-            return 135
-        }else{
-            //Padding
-            return 20
         }
+        
+        if sectionsExpanded == true{
+            if indexPath.row == 0{
+                //Ingredient Cell
+                return 135
+            }else{
+                //Padding
+                return 20
+            }
+        }else{
+            return 0.1
+        }
+
     }
     
     deinit {
@@ -149,7 +161,7 @@ class List: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         if section == 0 || section == (ArrayOfItems.count + 1){
             //title section is nonexistent and so is the "Add Item" section
-            return 0
+            return 0.0001
         }else{
             //Ingredient name section
             return 36
@@ -162,7 +174,13 @@ class List: UIViewController, UITableViewDelegate, UITableViewDataSource {
             return ListTableView.dequeueReusableCell(withIdentifier: "ingredientHeader") as! ingredientHeader
         }else{
             let headerCell = ListTableView.dequeueReusableCell(withIdentifier: "ingredientHeader") as! ingredientHeader
-            headerCell.ingredient.text = ArrayOfItems[section - 1]
+            let ingr = ArrayOfItems[section - 1]
+            
+            let attributeString: NSMutableAttributedString =  NSMutableAttributedString(string: ingr)
+            attributeString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: 2, range: NSMakeRange(0, attributeString.length))
+            headerCell.ingredient.attributedText = attributeString
+            //headerCell.ingredient.text = "HELLOOOO"
+
             return headerCell.contentView
         }
     }
@@ -180,10 +198,46 @@ class List: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        if indexPath.section == ArrayOfItems.count + 1{
+            print("Add Item Pressed")
+        }
     }
-
+    
+    func textViewDidChange(_ textView: UITextView) {
+        print("TEXT CHANGE")
+        
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        print("DID BEGIN EDITING")
+    }
+    
+    @IBAction func shoppingCartPressed(_ sender: UIButton) {
+        if sectionsExpanded == true{
+            //collapse cells
+            groceryListTitle.title = ""
+            sectionsExpanded = false
+            sender.setImage(UIImage(named: "ShoppingCart"), for: .normal)
+        }else{
+            //expand cells
+            sectionsExpanded = true
+            sender.setImage(UIImage(named: "triangle"), for: .normal)
+        }
+        ListTableView.beginUpdates()
+        ListTableView.endUpdates()
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField.text != nil && textField.text != ""{
+            ArrayOfItems.append(textField.text!)
+        }
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    
 }
-
 
 extension UIImage {
     class func imageWithColor(color: UIColor) -> UIImage {
@@ -194,6 +248,30 @@ extension UIImage {
         let image : UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         return image
+    }
+}
+
+extension UIViewController: UITextFieldDelegate{
+    func addToolBar(textField: UITextField){
+        var toolBar = UIToolbar()
+        toolBar.barStyle = UIBarStyle.default
+        toolBar.isTranslucent = true
+        toolBar.tintColor = UIColor(red: 76/255, green: 217/255, blue: 100/255, alpha: 1)
+        var doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItem.Style.done, target: self, action: "donePressed")
+        var cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItem.Style.plain, target: self, action: "cancelPressed")
+        var spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
+        toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
+        toolBar.isUserInteractionEnabled = true
+        toolBar.sizeToFit()
+
+        textField.delegate = self
+        textField.inputAccessoryView = toolBar
+    }
+    func donePressed(){
+        view.endEditing(true)
+    }
+    func cancelPressed(){
+        view.endEditing(true) // or do something
     }
 }
 
