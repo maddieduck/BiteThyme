@@ -24,6 +24,7 @@
 		107F9DB02474BF18007470F4 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 107F9DAE2474BEFA007470F4 /* libsqlite3.tbd */; };
 		107F9DB12474BF28007470F4 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 107F9DAF2474BF07007470F4 /* libz.tbd */; };
 		107F9DB22474BF36007470F4 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 107F9DAD2474BEEE007470F4 /* libc++.tbd */; };
+		10B54B5524A2FBC900A4D813 /* Instcart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B54B5424A2FBC900A4D813 /* Instcart.swift */; };
 		10BDE2372474FAFF004DDE3E /* GoogleUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10BDE2362474FAFF004DDE3E /* GoogleUtilities.framework */; };
 		10BDE24124762B7C004DDE3E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BDE24024762B7C004DDE3E /* Constants.swift */; };
 		10BDE245247636B1004DDE3E /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10BDE244247636B1004DDE3E /* SafariServices.framework */; };
@@ -37,6 +38,7 @@
 		10BDE291247BABE5004DDE3E /* ingredientHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BDE28F247BABE5004DDE3E /* ingredientHeader.swift */; };
 		10BDE293247CD270004DDE3E /* Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BDE292247CD270004DDE3E /* Padding.swift */; };
 		10BDE295247CD3D8004DDE3E /* AddIngreient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BDE294247CD3D8004DDE3E /* AddIngreient.swift */; };
+		10BDE29724809D9A004DDE3E /* CheckBoxPressed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BDE29624809D9A004DDE3E /* CheckBoxPressed.swift */; };
 		10CB1BBF244820FB00821EB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CB1BBE244820FB00821EB9 /* AppDelegate.swift */; };
 		10CB1BC1244820FB00821EB9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CB1BC0244820FB00821EB9 /* SceneDelegate.swift */; };
 		10CB1BC3244820FB00821EB9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CB1BC2244820FB00821EB9 /* ViewController.swift */; };
@@ -101,6 +103,7 @@
 		107F9DAD2474BEEE007470F4 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		107F9DAE2474BEFA007470F4 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		107F9DAF2474BF07007470F4 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		10B54B5424A2FBC900A4D813 /* Instcart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instcart.swift; sourceTree = "<group>"; };
 		10BDE22E2474F4E2004DDE3E /* GoogleUtilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GoogleUtilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		10BDE2342474F9B5004DDE3E /* GoogleUtilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GoogleUtilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		10BDE2362474FAFF004DDE3E /* GoogleUtilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GoogleUtilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,6 +134,7 @@
 		10BDE28F247BABE5004DDE3E /* ingredientHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ingredientHeader.swift; sourceTree = "<group>"; };
 		10BDE292247CD270004DDE3E /* Padding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Padding.swift; sourceTree = "<group>"; };
 		10BDE294247CD3D8004DDE3E /* AddIngreient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIngreient.swift; sourceTree = "<group>"; };
+		10BDE29624809D9A004DDE3E /* CheckBoxPressed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxPressed.swift; sourceTree = "<group>"; };
 		10CB1BBB244820FB00821EB9 /* BiteThyme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BiteThyme.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10CB1BBE244820FB00821EB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10CB1BC0244820FB00821EB9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -210,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				107F9D7C2457E761007470F4 /* List.swift */,
+				10BDE29624809D9A004DDE3E /* CheckBoxPressed.swift */,
 				107F9D99245BE80C007470F4 /* Stores */,
 				10BDE289247B8A12004DDE3E /* ListTitleTVCell.swift */,
 				107F9D6B245110F6007470F4 /* Kroger.swift */,
@@ -219,6 +224,7 @@
 				107F9D94245AA445007470F4 /* ListTableViewCell.swift */,
 				107F9D96245BDB06007470F4 /* ListCollectionViewCell.swift */,
 				107F9D69244FF8A2007470F4 /* Walmart.swift */,
+				10B54B5424A2FBC900A4D813 /* Instcart.swift */,
 				107F9D6F245558DE007470F4 /* Walgreens.swift */,
 				10BDE292247CD270004DDE3E /* Padding.swift */,
 			);
@@ -625,7 +631,9 @@
 				10CB1BC1244820FB00821EB9 /* SceneDelegate.swift in Sources */,
 				107F9DA22474564F007470F4 /* SignUp.swift in Sources */,
 				107F9D72245694F3007470F4 /* GroceryLists.swift in Sources */,
+				10B54B5524A2FBC900A4D813 /* Instcart.swift in Sources */,
 				10BDE291247BABE5004DDE3E /* ingredientHeader.swift in Sources */,
+				10BDE29724809D9A004DDE3E /* CheckBoxPressed.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

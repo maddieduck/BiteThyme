@@ -14,15 +14,25 @@ import WalmartSDKKit
 import WalmartOpenApi
 import SafariServices
 
+
+
 //Kroger
 let krogerCallback = Notification.Name(rawValue: KrogerCallbackNotifier)
 let KrogerCallbackNotifier = "KrogerCallbackNotifier"
 
 class List: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextViewDelegate{
     
-    var ArrayOfItems = ["milk", "eggs", "cheese", "bacon"]
-    var listTitle: String = ""
+    struct itemInfo{
+        //var itemName: String
+        var checked: Bool
+    }
     
+    //itemArray is the key to the dictionary
+    var itemsArray = ["milk", "eggs", "cheese"]
+    var itemsDictionary: [String: itemInfo] = [:]
+    
+    var listTitle: String = ""
+
     @IBOutlet weak var ListTableView: UITableView!
     @IBOutlet weak var groceryListTitle: UINavigationItem!
     @IBOutlet weak var checkoutButton: UIButton!
@@ -34,6 +44,17 @@ class List: UIViewController, UITableViewDelegate, UITableViewDataSource, UIText
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //populate dictionary
+        for item in itemsArray{
+            itemsDictionary[item] = itemInfo(checked: false)
+        }
+        itemsArray.append("nugget")
+        itemsDictionary["nugget"] = itemInfo(checked: true)
+        itemsArray.append("thyme")
+        itemsDictionary["thyme"] = itemInfo(checked: true)
+        itemsArray.append("rosemary")
+        itemsDictionary["rosemary"] = itemInfo(checked: false)
+        
         //Use this for the callback when using the authorization code and adding things to carts
         NotificationCenter.default.addObserver(forName: krogerCallback, object: nil, queue: nil) { (Notification) in
             //Kroger has given an Auth key and now we have to get the access token
@@ -49,11 +70,6 @@ class List: UIViewController, UITableViewDelegate, UITableViewDataSource, UIText
         let screenWidth = screenSize.width
         ListTableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: screenWidth, height: 0.1))
         
-        // Sets Bar's Background Image (Color) //
-        navbar.setBackgroundImage(UIImage.imageWithColor(color: .blue), for: .default)
-        // Sets Bar's Shadow Image (Color) //
-        navbar.shadowImage = UIImage.imageWithColor(color: .red)
-        navbar.setValue(true, forKey: "hidesShadow")
         
         
         //searchProduct(query: "Cheese")
@@ -82,6 +98,7 @@ class List: UIViewController, UITableViewDelegate, UITableViewDataSource, UIText
 //            }
 //        }
         
+        SearchCatalogItems(query: "")
         
     }
     
@@ -93,7 +110,7 @@ class List: UIViewController, UITableViewDelegate, UITableViewDataSource, UIText
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //ArrayOfItems.count
-        if section == 0 || section == (ArrayOfItems.count + 1){
+        if section == 0 || section == (itemsArray.count + 1){
             return 1
         }else{
             //each ingredient needs padding and store data
@@ -102,12 +119,12 @@ class List: UIViewController, UITableViewDelegate, UITableViewDataSource, UIText
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return ArrayOfItems[section]
+        return itemsArray[section]
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         //items + title + addItem at the bottom
-        return ArrayOfItems.count + 2
+        return itemsArray.count + 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -116,7 +133,7 @@ class List: UIViewController, UITableViewDelegate, UITableViewDataSource, UIText
             let titleCell = ListTableView.dequeueReusableCell(withIdentifier: "ListNameTVCell", for: indexPath) as! ListTitleTVCell
             titleCell.title.text = listTitle
             return titleCell
-        }else if indexPath.section == (ArrayOfItems.count + 1){
+        }else if indexPath.section == (itemsArray.count + 1){
             //Add Item (Last Cell)
             //let addCell = ListTableView.dequeueReusableCell(withIdentifier: "AddTVItem", for: indexPath) as! AddIngreient
             //addToolBar(textField: addCell.addItemTextField)
@@ -127,7 +144,8 @@ class List: UIViewController, UITableViewDelegate, UITableViewDataSource, UIText
             return ingredientCell
         }else{
             //Padding
-            return ListTableView.dequeueReusableCell(withIdentifier: "PaddingTVCellID", for: indexPath) as! Padding
+            let paddingCell = ListTableView.dequeueReusableCell(withIdentifier: "PaddingTVCellID", for: indexPath) as! Padding
+            return paddingCell
         }
     }
     
@@ -135,12 +153,15 @@ class List: UIViewController, UITableViewDelegate, UITableViewDataSource, UIText
         if indexPath.section == 0{
             //Title
             return 52
-        }else if indexPath.section == (ArrayOfItems.count + 1){
+        }else if indexPath.section == (itemsArray.count + 1){
             //Add Item Row
             return 36
         }
         
-        if sectionsExpanded == true{
+        let item = itemsArray[indexPath.section - 1]
+        let checked = itemsDictionary[item]?.checked
+        
+        if sectionsExpanded == true && checked == false{
             if indexPath.row == 0{
                 //Ingredient Cell
                 return 135
@@ -149,7 +170,7 @@ class List: UIViewController, UITableViewDelegate, UITableViewDataSource, UIText
                 return 20
             }
         }else{
-            return 0.1
+            return 0.0001
         }
 
     }
@@ -159,7 +180,7 @@ class List: UIViewController, UITableViewDelegate, UITableViewDataSource, UIText
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        if section == 0 || section == (ArrayOfItems.count + 1){
+        if section == 0 || section == (itemsArray.count + 1){
             //title section is nonexistent and so is the "Add Item" section
             return 0.0001
         }else{
@@ -169,18 +190,16 @@ class List: UIViewController, UITableViewDelegate, UITableViewDataSource, UIText
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        if section == 0 || section == (ArrayOfItems.count + 1){
+        if section == 0 || section == (itemsArray.count + 1){
             //for the first section that is unseen
-            return ListTableView.dequeueReusableCell(withIdentifier: "ingredientHeader") as! ingredientHeader
+            let cell = ListTableView.dequeueReusableCell(withIdentifier: "ingredientHeader") as! ingredientHeader
+            return cell
         }else{
             let headerCell = ListTableView.dequeueReusableCell(withIdentifier: "ingredientHeader") as! ingredientHeader
-            let ingr = ArrayOfItems[section - 1]
+            let item = itemsArray[section - 1]
+            let checked = itemsDictionary[item]?.checked
+            headerCell.populateItemName(item: item, checked: checked ?? false)
             
-            let attributeString: NSMutableAttributedString =  NSMutableAttributedString(string: ingr)
-            attributeString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: 2, range: NSMakeRange(0, attributeString.length))
-            headerCell.ingredient.attributedText = attributeString
-            //headerCell.ingredient.text = "HELLOOOO"
-
             return headerCell.contentView
         }
     }
@@ -199,19 +218,11 @@ class List: UIViewController, UITableViewDelegate, UITableViewDataSource, UIText
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
         tableView.deselectRow(at: indexPath, animated: true)
         
-        if indexPath.section == ArrayOfItems.count + 1{
+        if indexPath.section == itemsArray.count + 1{
             print("Add Item Pressed")
         }
     }
-    
-    func textViewDidChange(_ textView: UITextView) {
-        print("TEXT CHANGE")
-        
-    }
-    
-    func textViewDidEndEditing(_ textView: UITextView) {
-        print("DID BEGIN EDITING")
-    }
+
     
     @IBAction func shoppingCartPressed(_ sender: UIButton) {
         if sectionsExpanded == true{
@@ -230,12 +241,11 @@ class List: UIViewController, UITableViewDelegate, UITableViewDataSource, UIText
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField.text != nil && textField.text != ""{
-            ArrayOfItems.append(textField.text!)
+            //ArrayOfItems.append(textField.text!)
         }
         textField.resignFirstResponder()
         return true
     }
-    
     
 }
 

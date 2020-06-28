@@ -167,12 +167,12 @@ extension List{
         task.resume()
     }
     
-    struct itemInfo {
+    struct krogerItemInfo {
         var quantity: Int
         var upc: String
     }
     
-    func addItemToCart(token: String, itemToAdd: itemInfo){
+    func addItemToCart(token: String, itemToAdd: krogerItemInfo){
         let finalURL = "https://api.kroger.com/v1/cart/add"
         let url = URL(string:finalURL)!
         var request = URLRequest(url: url)
@@ -218,7 +218,7 @@ extension List{
         let featured: Bool?    //possibly boolean
         let sizes: [sizeDetails]?
         let items: [itemDetails]?
-        //let itemInformation: //not sure what this is
+        //let krogerItemInfo: //not sure what this is
         //let temperature:  //don't need this rn
     }
     

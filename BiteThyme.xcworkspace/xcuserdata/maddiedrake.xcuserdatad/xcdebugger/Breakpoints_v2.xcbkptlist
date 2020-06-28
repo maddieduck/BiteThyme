@@ -3,4 +3,54 @@
    uuid = "56E227CF-8D87-4F7D-A49A-778CC44C12FD"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7120F55D-7A8B-4FC0-A96F-6512A5DD1991"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BiteThyme/List/Walmart.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "7120F55D-7A8B-4FC0-A96F-6512A5DD1991 - c3c92f6d8269e450"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "globalinit_33_BD1FF597B7820DF94C7C6CA163D39EBF_func4"
+                  moduleName = "BiteThyme"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maddiedrake/Desktop/Git/BiteThyme/List/Walmart.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  uuid = "7120F55D-7A8B-4FC0-A96F-6512A5DD1991 - 23a12f524be431be"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BiteThyme.privateKeyPKCS8.unsafeMutableAddressor : Swift.String"
+                  moduleName = "BiteThyme"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maddiedrake/Desktop/Git/BiteThyme/List/Walmart.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
