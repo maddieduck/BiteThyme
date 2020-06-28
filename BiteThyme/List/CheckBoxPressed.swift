@@ -10,18 +10,21 @@ import Foundation
 import UIKit
 
 extension List: IngredientHeaderDelegate{
-    
-    func checkboxClicked(ingredient: String) {
+
+    func checkBoxButtonPressed(ingredient: String) {
+        print("CHECKBOX CLICKED")
         let oldCheckedValue = itemsDictionary[ingredient]?.checked
         if oldCheckedValue != nil{
             let newCheckedValue = !oldCheckedValue!
             print("NEW CHECKED ", newCheckedValue)
             itemsDictionary[ingredient]?.checked = newCheckedValue
-            //itemsDictionary.updateValue(<#T##value: itemInfo##itemInfo#>, forKey: <#T##String#>)
+        }else{
+            print("ERROR. checkBoxPressed function, ingredient cannot be found in dictionary")
         }
-        print("CHECKBOX CLICKED")
-        ListTableView.beginUpdates()
-        ListTableView.endUpdates()
+        ListTableView.reloadData()
+
+//        ListTableView.beginUpdates()
+//        ListTableView.endUpdates()
     }
-    
+
 }

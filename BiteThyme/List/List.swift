@@ -43,7 +43,7 @@ class List: UIViewController, UITableViewDelegate, UITableViewDataSource, UIText
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         //populate dictionary
         for item in itemsArray{
             itemsDictionary[item] = itemInfo(checked: false)
@@ -137,7 +137,7 @@ class List: UIViewController, UITableViewDelegate, UITableViewDataSource, UIText
             //Add Item (Last Cell)
             //let addCell = ListTableView.dequeueReusableCell(withIdentifier: "AddTVItem", for: indexPath) as! AddIngreient
             //addToolBar(textField: addCell.addItemTextField)
-            return ListTableView.dequeueReusableCell(withIdentifier: "AddTVItem", for: indexPath) as! AddIngreient
+            return ListTableView.dequeueReusableCell(withIdentifier: "AddTVItem", for: indexPath) as! AddIngredient
         }else if indexPath.row == 0{
             //store information
             let ingredientCell = ListTableView.dequeueReusableCell(withIdentifier: "ListTableViewCellID", for: indexPath) as! ListTableViewCell
@@ -199,8 +199,10 @@ class List: UIViewController, UITableViewDelegate, UITableViewDataSource, UIText
             let item = itemsArray[section - 1]
             let checked = itemsDictionary[item]?.checked
             headerCell.populateItemName(item: item, checked: checked ?? false)
-            
-            return headerCell.contentView
+            headerCell.isUserInteractionEnabled = true
+            headerCell.delegate = self
+            return headerCell
+            //return headerCell.contentView
         }
     }
     
@@ -216,8 +218,9 @@ class List: UIViewController, UITableViewDelegate, UITableViewDataSource, UIText
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+        print("DID SELECT ROW")
         tableView.deselectRow(at: indexPath, animated: true)
-        
+
         if indexPath.section == itemsArray.count + 1{
             print("Add Item Pressed")
         }
@@ -235,8 +238,27 @@ class List: UIViewController, UITableViewDelegate, UITableViewDataSource, UIText
             sectionsExpanded = true
             sender.setImage(UIImage(named: "triangle"), for: .normal)
         }
+//
+//        ListTableView.beginUpdates()
+//        ListTableView.endUpdates()
+//        ListTableView.reloadData()
+
+        CATransaction.begin()
+
+        CATransaction.setCompletionBlock({
+                //itemsArray.count + 1
+            self.ListTableView.reloadSections([0,1,2,3,4], with: .none)
+            print("DONE")
+        })
+
+        print("BEGIN")
         ListTableView.beginUpdates()
+        print("END")
         ListTableView.endUpdates()
+
+        CATransaction.commit()
+        
+        
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

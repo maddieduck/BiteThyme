@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddIngreient: UITableViewCell {
+class AddIngredient: UITableViewCell {
 
     @IBOutlet weak var addItemTextField: UITextField!
     
@@ -21,6 +21,10 @@ class AddIngreient: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         // Configure the view for the selected state
+    }
+    
+    @IBAction func clickity(_ sender: Any) {
+        print("clickity")
     }
     
 }

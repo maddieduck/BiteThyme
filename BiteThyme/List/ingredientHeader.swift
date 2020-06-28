@@ -8,7 +8,7 @@
 import UIKit
 
 protocol IngredientHeaderDelegate {
-    func checkboxClicked(ingredient: String)
+    func checkBoxButtonPressed(ingredient:String)
 }
 
 class ingredientHeader: UITableViewCell {
@@ -22,18 +22,20 @@ class ingredientHeader: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
 
-
     }
     
     @IBAction func checkboxPressed(_ sender: Any) {
         print("check pressed")
+        delegate?.checkBoxButtonPressed(ingredient: ingredient.text ?? "")
         if ingredient.text != nil{
-            delegate?.checkboxClicked(ingredient: ingredient.text!)
+            print("IF EXECUTED")
+            //delegate?.checkboxClicked(ingredient: ingredient.text!)
             
         }else{
             print("ERROR. Ingredient.text is nil in ingredientHeader")
         }
     }
+    
     
     func populateItemName(item: String, checked: Bool){
         if checked == true{
