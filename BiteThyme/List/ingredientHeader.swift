@@ -25,10 +25,8 @@ class ingredientHeader: UITableViewCell {
     }
     
     @IBAction func checkboxPressed(_ sender: Any) {
-        print("check pressed")
         delegate?.checkBoxButtonPressed(ingredient: ingredient.text ?? "")
         if ingredient.text != nil{
-            print("IF EXECUTED")
             //delegate?.checkboxClicked(ingredient: ingredient.text!)
             
         }else{
@@ -42,8 +40,10 @@ class ingredientHeader: UITableViewCell {
             let attributeString: NSMutableAttributedString =  NSMutableAttributedString(string: item)
                      attributeString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: 2, range: NSMakeRange(0, attributeString.length))
             ingredient.attributedText = attributeString
+            checkbox.setImage(UIImage(named: "circleWithCheck"), for: .normal)
         }else{
             ingredient.text = item
+            checkbox.setImage(UIImage(named: "openCircle"), for: .normal)
         }
     }
     

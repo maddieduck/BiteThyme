@@ -346,22 +346,30 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="36"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4QE-lr-WOe">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4QE-lr-WOe">
                                                     <rect key="frame" x="10" y="3" width="30" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Checkbox" image="openCircle"/>
                                                     <connections>
                                                         <action selector="checkboxPressed:" destination="LcL-M2-ogO" eventType="touchUpInside" id="MWa-An-pVt"/>
                                                     </connections>
                                                 </button>
-                                                <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Eggs" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="86o-2N-zRk">
-                                                    <rect key="frame" x="49" y="2" width="58" height="34"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Eggs" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="86o-2N-zRk">
+                                                    <rect key="frame" x="50" y="1" width="354" height="34"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
                                             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="4QE-lr-WOe" firstAttribute="centerY" secondItem="8mC-IA-M8U" secondAttribute="centerY" id="6NK-8u-NP4"/>
+                                                <constraint firstItem="4QE-lr-WOe" firstAttribute="leading" secondItem="8mC-IA-M8U" secondAttribute="leading" constant="10" id="BOI-jc-g83"/>
+                                                <constraint firstItem="86o-2N-zRk" firstAttribute="centerY" secondItem="8mC-IA-M8U" secondAttribute="centerY" id="FcL-9D-V82"/>
+                                                <constraint firstAttribute="trailing" secondItem="86o-2N-zRk" secondAttribute="trailing" constant="10" id="LhH-uF-ZgF"/>
+                                                <constraint firstItem="86o-2N-zRk" firstAttribute="leading" secondItem="4QE-lr-WOe" secondAttribute="trailing" constant="10" id="S9K-1K-JHr"/>
+                                                <constraint firstItem="86o-2N-zRk" firstAttribute="height" secondItem="8mC-IA-M8U" secondAttribute="height" multiplier="0.944444" id="V7B-tR-230"/>
+                                                <constraint firstItem="4QE-lr-WOe" firstAttribute="height" secondItem="8mC-IA-M8U" secondAttribute="height" multiplier="0.833333" id="gf7-fJ-xeI"/>
+                                                <constraint firstItem="4QE-lr-WOe" firstAttribute="width" secondItem="8mC-IA-M8U" secondAttribute="height" multiplier="5:6" id="tU1-ge-Wcf"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>

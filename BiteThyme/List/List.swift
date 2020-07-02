@@ -14,8 +14,6 @@ import WalmartSDKKit
 import WalmartOpenApi
 import SafariServices
 
-
-
 //Kroger
 let krogerCallback = Notification.Name(rawValue: KrogerCallbackNotifier)
 let KrogerCallbackNotifier = "KrogerCallbackNotifier"
@@ -25,10 +23,11 @@ class List: UIViewController, UITableViewDelegate, UITableViewDataSource, UIText
     struct itemInfo{
         //var itemName: String
         var checked: Bool
+        var groceryStoreDetails: [ingredientInfo]?
     }
     
     //itemArray is the key to the dictionary
-    var itemsArray = ["milk", "eggs", "cheese"]
+    var itemsArray = ["milk", "eggs", "cheese","milky", "eggs ", "cheeseyyy"]
     var itemsDictionary: [String: itemInfo] = [:]
     
     var listTitle: String = ""
@@ -46,14 +45,14 @@ class List: UIViewController, UITableViewDelegate, UITableViewDataSource, UIText
         
         //populate dictionary
         for item in itemsArray{
-            itemsDictionary[item] = itemInfo(checked: false)
+            itemsDictionary[item] = itemInfo(checked: false, groceryStoreDetails: nil)
         }
         itemsArray.append("nugget")
-        itemsDictionary["nugget"] = itemInfo(checked: true)
+        itemsDictionary["nugget"] = itemInfo(checked: true, groceryStoreDetails: nil)
         itemsArray.append("thyme")
-        itemsDictionary["thyme"] = itemInfo(checked: true)
+        itemsDictionary["thyme"] = itemInfo(checked: true, groceryStoreDetails: nil)
         itemsArray.append("rosemary")
-        itemsDictionary["rosemary"] = itemInfo(checked: false)
+        itemsDictionary["rosemary"] = itemInfo(checked: false, groceryStoreDetails: nil)
         
         //Use this for the callback when using the authorization code and adding things to carts
         NotificationCenter.default.addObserver(forName: krogerCallback, object: nil, queue: nil) { (Notification) in
@@ -70,35 +69,27 @@ class List: UIViewController, UITableViewDelegate, UITableViewDataSource, UIText
         let screenWidth = screenSize.width
         ListTableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: screenWidth, height: 0.1))
         
+        //get the grocery store details
+        let myGroup = DispatchGroup()
+        getAccessToken(authType: .client_credentials, scope: .productCompact, authKey: nil) { (token) in
+            for item in self.itemsArray{
+                myGroup.enter()
+                //get 2D array of products
+                //shuffle the 2D array into a 1D array
+                self.getGroceriesForStores(token: token ?? "", groceryItem: item) { (returnedItemInfo) in
+                    //populate the dictionary
+                    self.itemsDictionary[item]?.groceryStoreDetails = returnedItemInfo
+                    myGroup.leave()
+                }
+            }
+        }
+
+        myGroup.notify(queue: DispatchQueue.main) {
+            //After loaded repopulate the tableview
+            self.ListTableView.reloadData()
+        }
         
-        
-        //searchProduct(query: "Cheese")
-        
-        //Get the Kroger products for all elements in the array
-        //THIS WORKS 
-//        getAccessToken(authType: .client_credentials, scope: .productCompact, authKey: nil) { (token) in
-//            if token != nil{
-//                let myGroup = DispatchGroup()
-//                var ArrayOfProductData: [productListData] = []
-//                for ingr in self.ArrayOfItems{
-//                    myGroup.enter()
-//                    self.getProductList(token: token!, filterTerm: ingr, filterLimit: 10) { (productData) in
-//                        //print("INGR DESCRIPTION ", productData!.data![0].description )
-//                        //print("appending")
-//                        ArrayOfProductData.append(productData!)
-//                        myGroup.leave()
-//                    }
-//                }
-//                myGroup.notify(queue: .main) {
-//                    //print("Finished getting product data for all ingredients")
-//                    for ingr in ArrayOfProductData{
-//                        //print("INGR DESCRIPTION ", ingr.data![0].description )
-//                    }
-//                }
-//            }
-//        }
-        
-        SearchCatalogItems(query: "")
+        //SearchCatalogItems(query: "")
         
     }
     
@@ -141,6 +132,7 @@ class List: UIViewController, UITableViewDelegate, UITableViewDataSource, UIText
         }else if indexPath.row == 0{
             //store information
             let ingredientCell = ListTableView.dequeueReusableCell(withIdentifier: "ListTableViewCellID", for: indexPath) as! ListTableViewCell
+            //ingredientCell.
             return ingredientCell
         }else{
             //Padding
@@ -238,25 +230,8 @@ class List: UIViewController, UITableViewDelegate, UITableViewDataSource, UIText
             sectionsExpanded = true
             sender.setImage(UIImage(named: "triangle"), for: .normal)
         }
-//
-//        ListTableView.beginUpdates()
-//        ListTableView.endUpdates()
-//        ListTableView.reloadData()
 
-        CATransaction.begin()
-
-        CATransaction.setCompletionBlock({
-                //itemsArray.count + 1
-            self.ListTableView.reloadSections([0,1,2,3,4], with: .none)
-            print("DONE")
-        })
-
-        print("BEGIN")
-        ListTableView.beginUpdates()
-        print("END")
-        ListTableView.endUpdates()
-
-        CATransaction.commit()
+        self.ListTableView.reloadData()
         
         
     }

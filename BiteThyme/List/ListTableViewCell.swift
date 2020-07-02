@@ -30,10 +30,7 @@ class ListTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollection
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = ListCollectionView.dequeueReusableCell(withReuseIdentifier: "ListCollectionViewCellID", for: indexPath) as! ListCollectionViewCell
-//        cell.addItem.layer.masksToBounds = true
-//        cell.addItem.layer.cornerRadius = cell.addItem.frame.height/3
-//        cell.addItem.layer.borderWidth = 1
-//        cell.addItem.layer.borderColor = UIColor.lightGray.cgColor
+        cell.storeName.text = "HELLO"
         return cell
     }
     

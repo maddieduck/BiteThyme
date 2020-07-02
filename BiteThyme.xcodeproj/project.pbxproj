@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		105A7FB724A9816A00A0854B /* KrogerClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105A7FB624A9816A00A0854B /* KrogerClass.swift */; };
+		105A7FB924A9826600A0854B /* GroceryStoreParentClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105A7FB824A9826600A0854B /* GroceryStoreParentClass.swift */; };
+		105A7FBB24AD746400A0854B /* GetGrocerytListHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105A7FBA24AD746400A0854B /* GetGrocerytListHelper.swift */; };
 		107F9D6A244FF8A2007470F4 /* Walmart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107F9D69244FF8A2007470F4 /* Walmart.swift */; };
-		107F9D6C245110F6007470F4 /* Kroger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107F9D6B245110F6007470F4 /* Kroger.swift */; };
+		107F9D6C245110F6007470F4 /* Kroger API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107F9D6B245110F6007470F4 /* Kroger API.swift */; };
 		107F9D6E2455425C007470F4 /* Sams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107F9D6D2455425C007470F4 /* Sams.swift */; };
 		107F9D70245558DE007470F4 /* Walgreens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107F9D6F245558DE007470F4 /* Walgreens.swift */; };
 		107F9D72245694F3007470F4 /* GroceryLists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107F9D71245694F3007470F4 /* GroceryLists.swift */; };
@@ -84,8 +87,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		105A7FB624A9816A00A0854B /* KrogerClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KrogerClass.swift; sourceTree = "<group>"; };
+		105A7FB824A9826600A0854B /* GroceryStoreParentClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryStoreParentClass.swift; sourceTree = "<group>"; };
+		105A7FBA24AD746400A0854B /* GetGrocerytListHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGrocerytListHelper.swift; sourceTree = "<group>"; };
 		107F9D69244FF8A2007470F4 /* Walmart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Walmart.swift; sourceTree = "<group>"; };
-		107F9D6B245110F6007470F4 /* Kroger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kroger.swift; sourceTree = "<group>"; };
+		107F9D6B245110F6007470F4 /* Kroger API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Kroger API.swift"; sourceTree = "<group>"; };
 		107F9D6D2455425C007470F4 /* Sams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sams.swift; sourceTree = "<group>"; };
 		107F9D6F245558DE007470F4 /* Walgreens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Walgreens.swift; sourceTree = "<group>"; };
 		107F9D71245694F3007470F4 /* GroceryLists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryLists.swift; sourceTree = "<group>"; };
@@ -214,10 +220,13 @@
 			isa = PBXGroup;
 			children = (
 				107F9D7C2457E761007470F4 /* List.swift */,
+				105A7FBA24AD746400A0854B /* GetGrocerytListHelper.swift */,
 				10BDE29624809D9A004DDE3E /* CheckBoxPressed.swift */,
 				107F9D99245BE80C007470F4 /* Stores */,
 				10BDE289247B8A12004DDE3E /* ListTitleTVCell.swift */,
-				107F9D6B245110F6007470F4 /* Kroger.swift */,
+				107F9D6B245110F6007470F4 /* Kroger API.swift */,
+				105A7FB624A9816A00A0854B /* KrogerClass.swift */,
+				105A7FB824A9826600A0854B /* GroceryStoreParentClass.swift */,
 				107F9D6D2455425C007470F4 /* Sams.swift */,
 				10BDE28F247BABE5004DDE3E /* ingredientHeader.swift */,
 				10BDE294247CD3D8004DDE3E /* AddIngredient.swift */,
@@ -616,13 +625,16 @@
 				107F9D7A2457C696007470F4 /* GroceryListsCell.swift in Sources */,
 				107F9DAA24748E1C007470F4 /* Initial.swift in Sources */,
 				10BDE295247CD3D8004DDE3E /* AddIngredient.swift in Sources */,
-				107F9D6C245110F6007470F4 /* Kroger.swift in Sources */,
+				105A7FB924A9826600A0854B /* GroceryStoreParentClass.swift in Sources */,
+				107F9D6C245110F6007470F4 /* Kroger API.swift in Sources */,
 				107F9DA7247485D9007470F4 /* Utilities.swift in Sources */,
 				107F9D6E2455425C007470F4 /* Sams.swift in Sources */,
+				105A7FBB24AD746400A0854B /* GetGrocerytListHelper.swift in Sources */,
 				107F9D7D2457E761007470F4 /* List.swift in Sources */,
 				107F9D6A244FF8A2007470F4 /* Walmart.swift in Sources */,
 				107F9D97245BDB06007470F4 /* ListCollectionViewCell.swift in Sources */,
 				10BDE28A247B8A12004DDE3E /* ListTitleTVCell.swift in Sources */,
+				105A7FB724A9816A00A0854B /* KrogerClass.swift in Sources */,
 				10BDE293247CD270004DDE3E /* Padding.swift in Sources */,
 				107F9DA524745691007470F4 /* Login.swift in Sources */,
 				10CB1BC3244820FB00821EB9 /* ViewController.swift in Sources */,

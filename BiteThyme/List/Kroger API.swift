@@ -28,7 +28,6 @@ extension List{
     
     //When making an API request that is either returning personalized customer data or acting on behalf of a customer
     func AuthorizationCustomerContext(scope: authorizationCustomerScope) {
-        //TODO build case for each
         var scopeChosen = ""
         if scope == .profileCompact{
             scopeChosen = "profile.compact"
@@ -85,8 +84,7 @@ extension List{
     }
     
     func getAccessToken(authType: grantType, scope: scope?, authKey: String?, completion: @escaping (String?) -> ()){
-        
-        print("GET ACCESS TOKEN")
+        //print("GET ACCESS TOKEN")
         let baseURL = "https://api.kroger.com/v1/connect/oauth2/token?grant_type="
         var finalURL = ""
         if authType == .client_credentials{
@@ -243,6 +241,7 @@ extension List{
 
     func getProductList(token: String, filterTerm: String, filterLimit: Int, completion: @escaping (productListData?) -> ()){
         let finalURL = "https://api.kroger.com/v1/products?filter.term=" + filterTerm + "&filter.limit" + String(filterLimit)
+        //print("FINAL URL ", finalURL)
         let url = URL(string:finalURL)!
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
@@ -289,27 +288,28 @@ extension List{
         task.resume()
     }
     
-    func getCoupons(token: String, productID: String){
-        let finalURL = "https://api.kroger.com/v1/coupons?filter.productId=" + productID
-        let url = URL(string:finalURL)!
-        var request = URLRequest(url: url)
-        request.httpMethod = "GET"
-        request.setValue("application/json", forHTTPHeaderField: "Accept")
-        request.setValue(token, forHTTPHeaderField: "Authorization")
-        
-        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
-            if let error = error {
-                print("error: \(error)")
-            } else {
-                if let response = response as? HTTPURLResponse {
-                    print("statusCode: \(response.statusCode)")
-                }
-                if let data = data, let coupon = String(data: data, encoding: .utf8) {
-                    print("data: \(coupon)")
-                }
-            }
-        }
-        task.resume()
-    }
+//Deprecated??
+//    func getCoupons(token: String, productID: String){
+//        let finalURL = "https://api.kroger.com/v1/coupons?filter.productId=" + productID
+//        let url = URL(string:finalURL)!
+//        var request = URLRequest(url: url)
+//        request.httpMethod = "GET"
+//        request.setValue("application/json", forHTTPHeaderField: "Accept")
+//        request.setValue(token, forHTTPHeaderField: "Authorization")
+//
+//        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+//            if let error = error {
+//                print("error: \(error)")
+//            } else {
+//                if let response = response as? HTTPURLResponse {
+//                    print("statusCode: \(response.statusCode)")
+//                }
+//                if let data = data, let coupon = String(data: data, encoding: .utf8) {
+//                    print("data: \(coupon)")
+//                }
+//            }
+//        }
+//        task.resume()
+//    }
     
 }
